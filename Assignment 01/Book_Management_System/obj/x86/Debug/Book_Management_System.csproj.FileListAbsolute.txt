@@ -1,0 +1,11 @@
+C:\C#\Book_Management_System\Book_Management_System\bin\Debug\Book_Management_System.exe
+C:\C#\Book_Management_System\Book_Management_System\bin\Debug\Book_Management_System.pdb
+C:\C#\Book_Management_System\Book_Management_System\obj\x86\Debug\Book_Management_System.frm_Login.resources
+C:\C#\Book_Management_System\Book_Management_System\obj\x86\Debug\Book_Management_System.Properties.Resources.resources
+C:\C#\Book_Management_System\Book_Management_System\obj\x86\Debug\Book_Management_System.csproj.GenerateResource.Cache
+C:\C#\Book_Management_System\Book_Management_System\obj\x86\Debug\Book_Management_System.exe
+C:\C#\Book_Management_System\Book_Management_System\obj\x86\Debug\Book_Management_System.pdb
+C:\C#\Book_Management_System\Book_Management_System\obj\x86\Debug\Book_Management_System.csprojResolveAssemblyReference.cache
+C:\C#\Book_Management_System\Book_Management_System\obj\x86\Debug\Book_Management_System.frm_Accept_Book_Details.resources
+C:\C#\Book_Management_System\Book_Management_System\obj\x86\Debug\Book_Management_System.frm_View_Books_Details.resources
+C:\C#\Book_Management_System\Book_Management_System\bin\Debug\Book_Management_System.exe.config
