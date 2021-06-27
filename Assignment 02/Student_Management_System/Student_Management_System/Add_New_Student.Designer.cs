@@ -101,6 +101,7 @@
             // 
             // tb_Roll_No
             // 
+            this.tb_Roll_No.Enabled = false;
             this.tb_Roll_No.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Roll_No.Location = new System.Drawing.Point(785, 130);
             this.tb_Roll_No.MaxLength = 10;

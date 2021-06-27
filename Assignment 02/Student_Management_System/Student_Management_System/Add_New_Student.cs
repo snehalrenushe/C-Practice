@@ -37,13 +37,48 @@ namespace Student_Management_System
 
         void Clear_Controls()
         {
-            tb_Roll_No.Clear();
+            tb_Roll_No.Text = Convert.ToString(Auto_Increament());
+
             tb_Name.Clear();
             dtp_Date_Of_Birth.ResetText();
             tb_Mobile_No.Clear();
             cb_Course.SelectedIndex = -1;
+
+            tb_Roll_No.Focus();
         }
 
+        int Auto_Increament()
+        {
+            Con_Open();
+
+            int Cnt = -1;
+
+            SqlCommand Cmd = new SqlCommand();
+
+            Cmd.Connection = Con;
+            Cmd.CommandText = "Select Count(*) From Student_Details";
+
+            Cnt = Convert.ToInt32(Cmd.ExecuteScalar());
+
+            Cmd.Dispose();
+
+            if (Cnt > 0)
+            {
+                Cmd.Connection = Con;
+                Cmd.CommandText = "Select Max(Roll_No) From Student_Details";
+
+                Cnt = Convert.ToInt32(Cmd.ExecuteScalar()) + 1;
+            }
+            else
+            {
+                Cnt = 1;
+            }
+
+            Con_Close();
+
+            return Cnt;
+
+        }
         private void Only_Numeric(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))

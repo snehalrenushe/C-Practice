@@ -57,7 +57,7 @@ namespace Student_Management_System
             }
         }
 
-        SqlConnection Con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DB_Book_Management_System;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DB_Student_Management_System;Integrated Security=True");
         
         void Con_Open()
         {
@@ -99,14 +99,14 @@ namespace Student_Management_System
 
         private void cb_Course_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Bind_Grid("Select * from Student_Details where course = ");
+            Bind_Grid("Select * from Student_Details where Course ='" + cb_Course.Text + "' ");
         }
 
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
-            Bind_Grid("Select * from Student_Details");
-
             cb_Course.SelectedIndex = -1;
+
+            Bind_Grid("Select * from Student_Details"); 
         }
 
 
