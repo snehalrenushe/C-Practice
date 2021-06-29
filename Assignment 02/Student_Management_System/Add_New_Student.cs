@@ -98,6 +98,8 @@ namespace Student_Management_System
         private void frm_Add_New_Student_Load(object sender, EventArgs e)
         {
             Clear_Controls();
+
+            lbl_Logged_In_User.Text = "Welcome " + Global_Vars.Uname;
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -164,6 +166,5 @@ namespace Student_Management_System
                 this.Hide();
             }
         }
-
     }
 }

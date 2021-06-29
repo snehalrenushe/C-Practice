@@ -43,6 +43,7 @@
             this.dtp_Date_Of_Birth = new System.Windows.Forms.DateTimePicker();
             this.btn_Save = new System.Windows.Forms.Button();
             this.cb_Course = new System.Windows.Forms.ComboBox();
+            this.lbl_Logged_In_User = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_Header
@@ -222,12 +223,25 @@
             this.cb_Course.Size = new System.Drawing.Size(415, 45);
             this.cb_Course.TabIndex = 15;
             // 
+            // lbl_Logged_In_User
+            // 
+            this.lbl_Logged_In_User.AutoSize = true;
+            this.lbl_Logged_In_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lbl_Logged_In_User.Font = new System.Drawing.Font("Monotype Corsiva", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Logged_In_User.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Logged_In_User.Location = new System.Drawing.Point(31, 25);
+            this.lbl_Logged_In_User.Name = "lbl_Logged_In_User";
+            this.lbl_Logged_In_User.Size = new System.Drawing.Size(166, 24);
+            this.lbl_Logged_In_User.TabIndex = 16;
+            this.lbl_Logged_In_User.Text = "Logged In User Name";
+            // 
             // frm_Add_New_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1359, 717);
+            this.Controls.Add(this.lbl_Logged_In_User);
             this.Controls.Add(this.cb_Course);
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.dtp_Date_Of_Birth);
@@ -269,5 +283,6 @@
         private System.Windows.Forms.DateTimePicker dtp_Date_Of_Birth;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.ComboBox cb_Course;
+        private System.Windows.Forms.Label lbl_Logged_In_User;
     }
 }

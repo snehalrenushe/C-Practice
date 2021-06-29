@@ -61,8 +61,10 @@ namespace Student_Management_System
 
             string Ret = Convert.ToString(Cmd.ExecuteScalar());
 
-            if (Ret != tb_Username.Text)
+            if (Ret != tb_Username.Text && tb_Username.Text != "")
             {
+                Global_Vars.Uname = tb_Username.Text;
+
                 MessageBox.Show("  Login Successful!!!", "Working", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 frm_Add_New_Student ANS = new frm_Add_New_Student();
@@ -83,8 +85,6 @@ namespace Student_Management_System
             tb_Password.Enabled = false;
             btn_Submit.Enabled = false;
         }
-
-
 
     }
 }

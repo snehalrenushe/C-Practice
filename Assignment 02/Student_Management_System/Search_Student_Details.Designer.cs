@@ -30,16 +30,16 @@
         {
             this.cb_Course = new System.Windows.Forms.ComboBox();
             this.btn_Reset = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_Date_Of_Birth = new System.Windows.Forms.DateTimePicker();
             this.btn_Search = new System.Windows.Forms.Button();
             this.lbl_Course = new System.Windows.Forms.Label();
             this.btn_View_All_Student = new System.Windows.Forms.Button();
             this.btn_Log_Out = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tb_Mobile_No = new System.Windows.Forms.TextBox();
+            this.tb_Roll_No = new System.Windows.Forms.TextBox();
             this.lbl_Date_Of_Birth = new System.Windows.Forms.Label();
             this.lbl_Roll_No = new System.Windows.Forms.Label();
-            this.tb_Username = new System.Windows.Forms.TextBox();
+            this.tb_Name = new System.Windows.Forms.TextBox();
             this.lbl_Mobile_No = new System.Windows.Forms.Label();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.lbl_Header = new System.Windows.Forms.Label();
@@ -66,14 +66,15 @@
             this.btn_Reset.TabIndex = 29;
             this.btn_Reset.Text = "Reset";
             this.btn_Reset.UseVisualStyleBackColor = true;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
-            // dateTimePicker1
+            // dtp_Date_Of_Birth
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(734, 320);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(415, 44);
-            this.dateTimePicker1.TabIndex = 20;
+            this.dtp_Date_Of_Birth.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_Date_Of_Birth.Location = new System.Drawing.Point(734, 320);
+            this.dtp_Date_Of_Birth.Name = "dtp_Date_Of_Birth";
+            this.dtp_Date_Of_Birth.Size = new System.Drawing.Size(415, 44);
+            this.dtp_Date_Of_Birth.TabIndex = 20;
             // 
             // btn_Search
             // 
@@ -87,6 +88,7 @@
             this.btn_Search.TabIndex = 22;
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // lbl_Course
             // 
@@ -126,26 +128,25 @@
             this.btn_Log_Out.UseVisualStyleBackColor = true;
             this.btn_Log_Out.Click += new System.EventHandler(this.btn_Log_Out_Click);
             // 
-            // textBox1
+            // tb_Mobile_No
             // 
-            this.textBox1.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(734, 393);
-            this.textBox1.MaxLength = 10;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(415, 44);
-            this.textBox1.TabIndex = 21;
+            this.tb_Mobile_No.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Mobile_No.Location = new System.Drawing.Point(734, 393);
+            this.tb_Mobile_No.MaxLength = 10;
+            this.tb_Mobile_No.Multiline = true;
+            this.tb_Mobile_No.Name = "tb_Mobile_No";
+            this.tb_Mobile_No.Size = new System.Drawing.Size(415, 44);
+            this.tb_Mobile_No.TabIndex = 21;
             // 
-            // textBox2
+            // tb_Roll_No
             // 
-            this.textBox2.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(734, 161);
-            this.textBox2.MaxLength = 12;
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(415, 44);
-            this.textBox2.TabIndex = 16;
+            this.tb_Roll_No.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Roll_No.Location = new System.Drawing.Point(734, 161);
+            this.tb_Roll_No.MaxLength = 12;
+            this.tb_Roll_No.Multiline = true;
+            this.tb_Roll_No.Name = "tb_Roll_No";
+            this.tb_Roll_No.Size = new System.Drawing.Size(415, 44);
+            this.tb_Roll_No.TabIndex = 16;
             // 
             // lbl_Date_Of_Birth
             // 
@@ -169,15 +170,15 @@
             this.lbl_Roll_No.TabIndex = 24;
             this.lbl_Roll_No.Text = "Roll No";
             // 
-            // tb_Username
+            // tb_Name
             // 
-            this.tb_Username.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Username.Location = new System.Drawing.Point(734, 239);
-            this.tb_Username.MaxLength = 12;
-            this.tb_Username.Multiline = true;
-            this.tb_Username.Name = "tb_Username";
-            this.tb_Username.Size = new System.Drawing.Size(415, 44);
-            this.tb_Username.TabIndex = 18;
+            this.tb_Name.Font = new System.Drawing.Font("Modern No. 20", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Name.Location = new System.Drawing.Point(734, 239);
+            this.tb_Name.MaxLength = 12;
+            this.tb_Name.Multiline = true;
+            this.tb_Name.Name = "tb_Name";
+            this.tb_Name.Size = new System.Drawing.Size(415, 44);
+            this.tb_Name.TabIndex = 18;
             // 
             // lbl_Mobile_No
             // 
@@ -235,16 +236,16 @@
             this.Controls.Add(this.btn_Add_New_Student);
             this.Controls.Add(this.cb_Course);
             this.Controls.Add(this.btn_Reset);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_Date_Of_Birth);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.lbl_Course);
             this.Controls.Add(this.btn_View_All_Student);
             this.Controls.Add(this.btn_Log_Out);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tb_Mobile_No);
+            this.Controls.Add(this.tb_Roll_No);
             this.Controls.Add(this.lbl_Date_Of_Birth);
             this.Controls.Add(this.lbl_Roll_No);
-            this.Controls.Add(this.tb_Username);
+            this.Controls.Add(this.tb_Name);
             this.Controls.Add(this.lbl_Mobile_No);
             this.Controls.Add(this.lbl_Name);
             this.Controls.Add(this.lbl_Header);
@@ -260,16 +261,16 @@
 
         private System.Windows.Forms.ComboBox cb_Course;
         private System.Windows.Forms.Button btn_Reset;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_Date_Of_Birth;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Label lbl_Course;
         private System.Windows.Forms.Button btn_View_All_Student;
         private System.Windows.Forms.Button btn_Log_Out;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tb_Mobile_No;
+        private System.Windows.Forms.TextBox tb_Roll_No;
         private System.Windows.Forms.Label lbl_Date_Of_Birth;
         private System.Windows.Forms.Label lbl_Roll_No;
-        private System.Windows.Forms.TextBox tb_Username;
+        private System.Windows.Forms.TextBox tb_Name;
         private System.Windows.Forms.Label lbl_Mobile_No;
         private System.Windows.Forms.Label lbl_Name;
         private System.Windows.Forms.Label lbl_Header;
