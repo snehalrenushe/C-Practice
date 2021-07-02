@@ -34,7 +34,7 @@ namespace Student_Management_System
                 Con.Close();
             }
         }
-
+          
         void Clear_Controls()
         {
             tb_Roll_No.Clear();
@@ -45,7 +45,7 @@ namespace Student_Management_System
             cb_Course.SelectedIndex = -1;
 
             tb_Roll_No.Focus();
-        }
+        } 
 
         private void btn_Add_New_Student_Click(object sender, EventArgs e)
         {
