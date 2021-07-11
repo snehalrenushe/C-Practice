@@ -11,3 +11,5 @@ C:\C#\Assignment 02\Student_Management_System\Student_Management_System\obj\x86\
 C:\C#\Assignment 02\Student_Management_System\Student_Management_System\obj\x86\Debug\Student_Management_System.frm_Search_Student_Details.resources
 C:\C#\Assignment 02\Student_Management_System\Student_Management_System\obj\x86\Debug\Student_Management_System.frm_View_Student_Details_By_Course.resources
 C:\C#\Assignment 02\Student_Management_System\Student_Management_System\obj\x86\Debug\Student_Management_System.csprojResolveAssemblyReference.cache
+C:\C#\Assignment 02\Student_Management_System\Student_Management_System\obj\x86\Debug\Student_Management_System.MDI_Student_Management_Application.resources
+C:\C#\Assignment 02\Student_Management_System\Student_Management_System\obj\x86\Debug\Student_Management_System.frm_Update_Student_Details.resources

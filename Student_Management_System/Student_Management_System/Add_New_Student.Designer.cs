@@ -36,14 +36,10 @@
             this.tb_Roll_No = new System.Windows.Forms.TextBox();
             this.lbl_Date_Of_Birth = new System.Windows.Forms.Label();
             this.lbl_Roll_No = new System.Windows.Forms.Label();
-            this.btn_Log_Out = new System.Windows.Forms.Button();
-            this.btn_View_All_Student = new System.Windows.Forms.Button();
             this.lbl_Course = new System.Windows.Forms.Label();
-            this.btn_Search_Student = new System.Windows.Forms.Button();
             this.dtp_Date_Of_Birth = new System.Windows.Forms.DateTimePicker();
             this.btn_Save = new System.Windows.Forms.Button();
             this.cb_Course = new System.Windows.Forms.ComboBox();
-            this.lbl_Logged_In_User = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_Header
@@ -134,33 +130,6 @@
             this.lbl_Roll_No.TabIndex = 7;
             this.lbl_Roll_No.Text = "Roll No";
             // 
-            // btn_Log_Out
-            // 
-            this.btn_Log_Out.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Log_Out.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Log_Out.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Log_Out.ForeColor = System.Drawing.Color.Navy;
-            this.btn_Log_Out.Location = new System.Drawing.Point(1146, 12);
-            this.btn_Log_Out.Name = "btn_Log_Out";
-            this.btn_Log_Out.Size = new System.Drawing.Size(126, 37);
-            this.btn_Log_Out.TabIndex = 7;
-            this.btn_Log_Out.Text = "Log Out";
-            this.btn_Log_Out.UseVisualStyleBackColor = true;
-            this.btn_Log_Out.Click += new System.EventHandler(this.btn_Log_Out_Click);
-            // 
-            // btn_View_All_Student
-            // 
-            this.btn_View_All_Student.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_View_All_Student.Font = new System.Drawing.Font("MS Reference Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_View_All_Student.ForeColor = System.Drawing.Color.Navy;
-            this.btn_View_All_Student.Location = new System.Drawing.Point(914, 587);
-            this.btn_View_All_Student.Name = "btn_View_All_Student";
-            this.btn_View_All_Student.Size = new System.Drawing.Size(330, 55);
-            this.btn_View_All_Student.TabIndex = 8;
-            this.btn_View_All_Student.Text = "View All Student";
-            this.btn_View_All_Student.UseVisualStyleBackColor = true;
-            this.btn_View_All_Student.Click += new System.EventHandler(this.btn_View_All_Student_Click);
-            // 
             // lbl_Course
             // 
             this.lbl_Course.AutoSize = true;
@@ -171,19 +140,6 @@
             this.lbl_Course.Size = new System.Drawing.Size(125, 41);
             this.lbl_Course.TabIndex = 13;
             this.lbl_Course.Text = "Course";
-            // 
-            // btn_Search_Student
-            // 
-            this.btn_Search_Student.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Search_Student.Font = new System.Drawing.Font("MS Reference Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search_Student.ForeColor = System.Drawing.Color.Navy;
-            this.btn_Search_Student.Location = new System.Drawing.Point(123, 587);
-            this.btn_Search_Student.Name = "btn_Search_Student";
-            this.btn_Search_Student.Size = new System.Drawing.Size(277, 55);
-            this.btn_Search_Student.TabIndex = 6;
-            this.btn_Search_Student.Text = "Search Student";
-            this.btn_Search_Student.UseVisualStyleBackColor = true;
-            this.btn_Search_Student.Click += new System.EventHandler(this.btn_Search_Student_Click);
             // 
             // dtp_Date_Of_Birth
             // 
@@ -198,7 +154,7 @@
             this.btn_Save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Save.Font = new System.Drawing.Font("MS Reference Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.ForeColor = System.Drawing.Color.Navy;
-            this.btn_Save.Location = new System.Drawing.Point(557, 587);
+            this.btn_Save.Location = new System.Drawing.Point(555, 546);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(178, 55);
             this.btn_Save.TabIndex = 14;
@@ -223,32 +179,17 @@
             this.cb_Course.Size = new System.Drawing.Size(415, 45);
             this.cb_Course.TabIndex = 15;
             // 
-            // lbl_Logged_In_User
-            // 
-            this.lbl_Logged_In_User.AutoSize = true;
-            this.lbl_Logged_In_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lbl_Logged_In_User.Font = new System.Drawing.Font("Monotype Corsiva", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Logged_In_User.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Logged_In_User.Location = new System.Drawing.Point(31, 25);
-            this.lbl_Logged_In_User.Name = "lbl_Logged_In_User";
-            this.lbl_Logged_In_User.Size = new System.Drawing.Size(166, 24);
-            this.lbl_Logged_In_User.TabIndex = 16;
-            this.lbl_Logged_In_User.Text = "Logged In User Name";
-            // 
             // frm_Add_New_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1359, 717);
-            this.Controls.Add(this.lbl_Logged_In_User);
+            this.ControlBox = false;
             this.Controls.Add(this.cb_Course);
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.dtp_Date_Of_Birth);
-            this.Controls.Add(this.btn_Search_Student);
             this.Controls.Add(this.lbl_Course);
-            this.Controls.Add(this.btn_View_All_Student);
-            this.Controls.Add(this.btn_Log_Out);
             this.Controls.Add(this.tb_Mobile_No);
             this.Controls.Add(this.tb_Roll_No);
             this.Controls.Add(this.lbl_Date_Of_Birth);
@@ -276,13 +217,9 @@
         private System.Windows.Forms.TextBox tb_Roll_No;
         private System.Windows.Forms.Label lbl_Date_Of_Birth;
         private System.Windows.Forms.Label lbl_Roll_No;
-        private System.Windows.Forms.Button btn_Log_Out;
-        private System.Windows.Forms.Button btn_View_All_Student;
         private System.Windows.Forms.Label lbl_Course;
-        private System.Windows.Forms.Button btn_Search_Student;
         private System.Windows.Forms.DateTimePicker dtp_Date_Of_Birth;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.ComboBox cb_Course;
-        private System.Windows.Forms.Label lbl_Logged_In_User;
     }
 }

@@ -61,15 +61,20 @@ namespace Student_Management_System
 
             string Ret = Convert.ToString(Cmd.ExecuteScalar());
 
-            if (Ret != tb_Username.Text && tb_Username.Text != "")
+            if (Ret == tb_Username.Text && tb_Username.Text != "")
             {
                 Global_Vars.Uname = tb_Username.Text;
 
+                if(tb_Username.Text == "admin")
+                {
+                    Global_Vars.User_Role = 1;
+                }
+
                 MessageBox.Show("  Login Successful!!!", "Working", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                frm_Add_New_Student ANS = new frm_Add_New_Student();
+                MDI_Student_Management_Application SMA = new MDI_Student_Management_Application();
 
-                ANS.Show();
+                SMA.Show();
 
                 this.Hide();
             }

@@ -23,44 +23,10 @@ namespace Student_Management_System
 
         }
 
-        private void btn_Add_New_Student_Click(object sender, EventArgs e)
+        private void dgv_All_Student_List_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            frm_Add_New_Student ANS = new frm_Add_New_Student();
 
-            ANS.Show();
-
-            this.Hide();
         }
 
-        private void btn_Search_Student_Details_Click(object sender, EventArgs e)
-        {
-            frm_Search_Student_Details SSD = new frm_Search_Student_Details();
-
-            SSD.Show();
-
-            this.Hide();
-        }
-
-        private void btn_View_Student_By_Course_Click(object sender, EventArgs e)
-        {
-            frm_View_Student_Details_By_Course VSDBS = new frm_View_Student_Details_By_Course();
-
-            VSDBS.Show();
-
-            this.Hide();
-        }
-
-        private void btn_Log_Out_Click(object sender, EventArgs e)
-        {
-            DialogResult Res = MessageBox.Show("Logging Out", "Are you Sure??", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (Res == DialogResult.Yes)
-            {
-                frm_Login Obj = new frm_Login();
-                Obj.Show();
-
-                this.Hide();
-            }
-        }
     }
 }

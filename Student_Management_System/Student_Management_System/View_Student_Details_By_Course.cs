@@ -17,46 +17,6 @@ namespace Student_Management_System
             InitializeComponent();
         }
 
-        private void btn_Search_Student_Details_Click(object sender, EventArgs e)
-        {
-            frm_Search_Student_Details SSD = new frm_Search_Student_Details();
-
-            SSD.Show();
-
-            this.Hide();
-        }
-
-        private void btn_Add_New_Student_Click(object sender, EventArgs e)
-        {
-            frm_Add_New_Student ANS = new frm_Add_New_Student();
-
-            ANS.Show();
-
-            this.Hide();
-        }
-
-        private void btn_View_Student_By_Course_Click(object sender, EventArgs e)
-        {
-            frm_All_Student_List ASL = new frm_All_Student_List();
-
-            ASL.Show();
-
-            this.Hide();
-        }
-
-        private void btn_Log_Out_Click(object sender, EventArgs e)
-        {
-            DialogResult Res = MessageBox.Show("Logging Out", "Are you Sure??", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (Res == DialogResult.Yes)
-            {
-                frm_Login Obj = new frm_Login();
-                Obj.Show();
-
-                this.Hide();
-            }
-        }
-
         SqlConnection Con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DB_Student_Management_System;Integrated Security=True");
         
         void Con_Open()

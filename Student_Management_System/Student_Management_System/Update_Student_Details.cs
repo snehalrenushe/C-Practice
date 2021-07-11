@@ -10,9 +10,9 @@ using System.Data.SqlClient;
 
 namespace Student_Management_System
 {
-    public partial class frm_Search_Student_Details : Form
+    public partial class frm_Update_Student_Details : Form
     {
-        public frm_Search_Student_Details()
+        public frm_Update_Student_Details()
         {
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace Student_Management_System
                 Con.Close();
             }
         }
-          
+
         void Clear_Controls()
         {
             tb_Roll_No.Clear();
@@ -45,10 +45,11 @@ namespace Student_Management_System
             cb_Course.SelectedIndex = -1;
 
             tb_Roll_No.Focus();
-        } 
+        }
 
         private void btn_Reset_Click(object sender, EventArgs e)
         {
+            tb_Roll_No.Enabled = true;
             tb_Roll_No.Clear();
             tb_Name.Clear();
             tb_Mobile_No.Clear();
@@ -77,6 +78,11 @@ namespace Student_Management_System
                     dtp_Date_Of_Birth.Text = (Obj["DOB"].ToString());
                     tb_Mobile_No.Text = (Obj["Mobile_No"].ToString());
                     cb_Course.Text = Obj.GetString(Obj.GetOrdinal("Course"));
+
+                    tb_Name.Enabled = true;
+                    tb_Mobile_No.Enabled = true;
+                    cb_Course.Enabled = true;
+                    tb_Roll_No.Enabled = false;
                 }
                 else
                 {
@@ -87,5 +93,42 @@ namespace Student_Management_System
                 Con_Close();
             }
         }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            Con_Open();
+
+            if (tb_Roll_No.Text != "" && tb_Name.Text != "" && dtp_Date_Of_Birth.Text != "" && tb_Mobile_No.TextLength == 10 && cb_Course.Text != "")
+            {
+                SqlCommand Cmd = new SqlCommand();
+
+                Cmd.Connection = Con;
+
+                Cmd.CommandText = "UPDATE Student_Details Set Name = @Name,Mobile_No = @Mobile_No,Course = @Course Where Roll_No = @Roll_No";
+
+                Cmd.Parameters.Add("Name", SqlDbType.VarChar).Value = tb_Name.Text;
+                Cmd.Parameters.Add("Mobile_No", SqlDbType.Decimal).Value = tb_Mobile_No.Text;
+                Cmd.Parameters.Add("Course", SqlDbType.NVarChar).Value = cb_Course.Text;
+                Cmd.Parameters.Add("Roll_No", SqlDbType.Int).Value = tb_Roll_No.Text;
+
+                Cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Details Saved Sucessfully!!!", "Saving", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                btn_Reset.PerformClick();
+            }
+            else
+            {
+                MessageBox.Show("Incomplete Information..");
+            }
+
+            Con_Close();
+        }
+
+        private void frm_Update_Student_Details_Load(object sender, EventArgs e)
+        {
+            Clear_Controls();
+        }
     }
 }
+
