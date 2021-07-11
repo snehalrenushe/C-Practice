@@ -15,7 +15,7 @@ namespace Employee_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_Login_Form());
+            Application.Run(new frm_Login());
         }
     }
 }
