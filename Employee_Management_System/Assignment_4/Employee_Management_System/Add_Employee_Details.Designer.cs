@@ -62,7 +62,7 @@
             this.btn_Save.Location = new System.Drawing.Point(544, 579);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(175, 49);
-            this.btn_Save.TabIndex = 11;
+            this.btn_Save.TabIndex = 5;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = false;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
@@ -75,7 +75,7 @@
             this.tb_Name.Multiline = true;
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(344, 40);
-            this.tb_Name.TabIndex = 10;
+            this.tb_Name.TabIndex = 2;
             // 
             // tb_ID
             // 
@@ -86,7 +86,7 @@
             this.tb_ID.Multiline = true;
             this.tb_ID.Name = "tb_ID";
             this.tb_ID.Size = new System.Drawing.Size(344, 40);
-            this.tb_ID.TabIndex = 9;
+            this.tb_ID.TabIndex = 1;
             this.tb_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // lbl_Name
@@ -119,7 +119,7 @@
             this.tb_Salary.Multiline = true;
             this.tb_Salary.Name = "tb_Salary";
             this.tb_Salary.Size = new System.Drawing.Size(344, 40);
-            this.tb_Salary.TabIndex = 15;
+            this.tb_Salary.TabIndex = 3;
             // 
             // lbl_Salary
             // 
@@ -179,7 +179,7 @@
             this.cb_Department.Location = new System.Drawing.Point(813, 517);
             this.cb_Department.Name = "cb_Department";
             this.cb_Department.Size = new System.Drawing.Size(344, 42);
-            this.cb_Department.TabIndex = 19;
+            this.cb_Department.TabIndex = 4;
             // 
             // frm_Add_Employee_Details
             // 

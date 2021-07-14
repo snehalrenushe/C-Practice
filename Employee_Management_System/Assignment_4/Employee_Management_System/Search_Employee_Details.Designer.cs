@@ -72,7 +72,7 @@
             this.cb_Department.Location = new System.Drawing.Point(807, 510);
             this.cb_Department.Name = "cb_Department";
             this.cb_Department.Size = new System.Drawing.Size(344, 42);
-            this.cb_Department.TabIndex = 29;
+            this.cb_Department.TabIndex = 4;
             // 
             // dtp_Date_Of_Birth
             // 
@@ -101,7 +101,7 @@
             this.tb_Salary.Multiline = true;
             this.tb_Salary.Name = "tb_Salary";
             this.tb_Salary.Size = new System.Drawing.Size(344, 40);
-            this.tb_Salary.TabIndex = 26;
+            this.tb_Salary.TabIndex = 3;
             // 
             // lbl_Salary
             // 
@@ -133,7 +133,7 @@
             this.tb_Name.Multiline = true;
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(344, 40);
-            this.tb_Name.TabIndex = 24;
+            this.tb_Name.TabIndex = 2;
             // 
             // tb_ID
             // 
@@ -143,7 +143,7 @@
             this.tb_ID.Multiline = true;
             this.tb_ID.Name = "tb_ID";
             this.tb_ID.Size = new System.Drawing.Size(344, 40);
-            this.tb_ID.TabIndex = 23;
+            this.tb_ID.TabIndex = 1;
             // 
             // lbl_Name
             // 
@@ -175,7 +175,7 @@
             this.btn_Search.Location = new System.Drawing.Point(439, 586);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(132, 51);
-            this.btn_Search.TabIndex = 33;
+            this.btn_Search.TabIndex = 5;
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
@@ -188,7 +188,7 @@
             this.btn_Reset.Location = new System.Drawing.Point(692, 586);
             this.btn_Reset.Name = "btn_Reset";
             this.btn_Reset.Size = new System.Drawing.Size(125, 51);
-            this.btn_Reset.TabIndex = 34;
+            this.btn_Reset.TabIndex = 6;
             this.btn_Reset.Text = "Reset";
             this.btn_Reset.UseVisualStyleBackColor = false;
             this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);

@@ -52,7 +52,7 @@
             this.btn_Update.Location = new System.Drawing.Point(685, 600);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(144, 51);
-            this.btn_Update.TabIndex = 47;
+            this.btn_Update.TabIndex = 6;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = false;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
@@ -65,7 +65,7 @@
             this.btn_Search.Location = new System.Drawing.Point(437, 600);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(132, 51);
-            this.btn_Search.TabIndex = 46;
+            this.btn_Search.TabIndex = 5;
             this.btn_Search.Text = "Search";
             this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
@@ -87,7 +87,7 @@
             this.cb_Department.Location = new System.Drawing.Point(807, 518);
             this.cb_Department.Name = "cb_Department";
             this.cb_Department.Size = new System.Drawing.Size(344, 42);
-            this.cb_Department.TabIndex = 45;
+            this.cb_Department.TabIndex = 4;
             // 
             // dtp_Date_Of_Birth
             // 
@@ -116,7 +116,7 @@
             this.tb_Salary.Multiline = true;
             this.tb_Salary.Name = "tb_Salary";
             this.tb_Salary.Size = new System.Drawing.Size(344, 40);
-            this.tb_Salary.TabIndex = 42;
+            this.tb_Salary.TabIndex = 3;
             // 
             // lbl_Salary
             // 
@@ -148,7 +148,7 @@
             this.tb_Name.Multiline = true;
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(344, 40);
-            this.tb_Name.TabIndex = 40;
+            this.tb_Name.TabIndex = 2;
             // 
             // tb_ID
             // 
@@ -158,7 +158,7 @@
             this.tb_ID.Multiline = true;
             this.tb_ID.Name = "tb_ID";
             this.tb_ID.Size = new System.Drawing.Size(344, 40);
-            this.tb_ID.TabIndex = 39;
+            this.tb_ID.TabIndex = 1;
             // 
             // lbl_Name
             // 
@@ -202,7 +202,7 @@
             this.btn_Reset.Location = new System.Drawing.Point(1001, 109);
             this.btn_Reset.Name = "btn_Reset";
             this.btn_Reset.Size = new System.Drawing.Size(132, 51);
-            this.btn_Reset.TabIndex = 48;
+            this.btn_Reset.TabIndex = 7;
             this.btn_Reset.Text = "Reset";
             this.btn_Reset.UseVisualStyleBackColor = false;
             this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
@@ -230,6 +230,7 @@
             this.Controls.Add(this.lbl_Header);
             this.Name = "frm_Update_Employee_Details";
             this.Text = "Update Employee Details";
+            this.Load += new System.EventHandler(this.frm_Update_Employee_Details_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

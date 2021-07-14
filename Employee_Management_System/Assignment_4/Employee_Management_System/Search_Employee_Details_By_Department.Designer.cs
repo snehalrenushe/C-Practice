@@ -77,7 +77,7 @@
             this.cb_Department.Location = new System.Drawing.Point(518, 124);
             this.cb_Department.Name = "cb_Department";
             this.cb_Department.Size = new System.Drawing.Size(344, 42);
-            this.cb_Department.TabIndex = 31;
+            this.cb_Department.TabIndex = 1;
             this.cb_Department.SelectedIndexChanged += new System.EventHandler(this.cb_Department_SelectedIndexChanged);
             // 
             // lbl_Department
@@ -113,7 +113,7 @@
             this.btn_Refresh.Location = new System.Drawing.Point(989, 121);
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.Size = new System.Drawing.Size(148, 45);
-            this.btn_Refresh.TabIndex = 37;
+            this.btn_Refresh.TabIndex = 2;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = false;
             this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);

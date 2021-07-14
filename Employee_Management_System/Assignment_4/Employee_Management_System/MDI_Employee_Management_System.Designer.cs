@@ -90,6 +90,7 @@
             this.updateEmployeeDetailsToolStripMenuItem.Name = "updateEmployeeDetailsToolStripMenuItem";
             this.updateEmployeeDetailsToolStripMenuItem.Size = new System.Drawing.Size(283, 30);
             this.updateEmployeeDetailsToolStripMenuItem.Text = "Update Employee Details";
+            this.updateEmployeeDetailsToolStripMenuItem.Visible = false;
             this.updateEmployeeDetailsToolStripMenuItem.Click += new System.EventHandler(this.updateEmployeeDetailsToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
@@ -106,6 +107,7 @@
             this.viewEmployeeDetailsByDeptToolStripMenuItem.Name = "viewEmployeeDetailsByDeptToolStripMenuItem";
             this.viewEmployeeDetailsByDeptToolStripMenuItem.Size = new System.Drawing.Size(346, 30);
             this.viewEmployeeDetailsByDeptToolStripMenuItem.Text = "Search Employee Details by Dept";
+            this.viewEmployeeDetailsByDeptToolStripMenuItem.Visible = false;
             this.viewEmployeeDetailsByDeptToolStripMenuItem.Click += new System.EventHandler(this.viewEmployeeDetailsByDeptToolStripMenuItem_Click);
             // 
             // viewEmployeeDetailsToolStripMenuItem
@@ -159,6 +161,7 @@
             // 
             // btn_Log_Out
             // 
+            this.btn_Log_Out.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_Log_Out.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btn_Log_Out.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Log_Out.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));

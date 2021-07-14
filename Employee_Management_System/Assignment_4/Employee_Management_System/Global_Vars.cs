@@ -7,7 +7,7 @@ namespace Employee_Management_System
 {
     class Global_Vars
     {
-        public static string Uname = "admin";
+        public static string Uname = "User";
         public static int User_Role = 0;
     }
 }

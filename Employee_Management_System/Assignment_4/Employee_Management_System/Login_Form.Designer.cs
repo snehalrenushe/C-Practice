@@ -66,7 +66,7 @@
             this.tb_Username.Multiline = true;
             this.tb_Username.Name = "tb_Username";
             this.tb_Username.Size = new System.Drawing.Size(344, 40);
-            this.tb_Username.TabIndex = 2;
+            this.tb_Username.TabIndex = 1;
             this.tb_Username.TextChanged += new System.EventHandler(this.tb_Username_TextChanged);
             // 
             // tb_Password
@@ -79,7 +79,7 @@
             this.tb_Password.Name = "tb_Password";
             this.tb_Password.PasswordChar = '*';
             this.tb_Password.Size = new System.Drawing.Size(344, 40);
-            this.tb_Password.TabIndex = 3;
+            this.tb_Password.TabIndex = 2;
             this.tb_Password.TextChanged += new System.EventHandler(this.tb_Password_TextChanged);
             // 
             // btn_Submit
@@ -91,7 +91,7 @@
             this.btn_Submit.Location = new System.Drawing.Point(293, 417);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(175, 49);
-            this.btn_Submit.TabIndex = 4;
+            this.btn_Submit.TabIndex = 3;
             this.btn_Submit.Text = "Submit";
             this.btn_Submit.UseVisualStyleBackColor = false;
             this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);

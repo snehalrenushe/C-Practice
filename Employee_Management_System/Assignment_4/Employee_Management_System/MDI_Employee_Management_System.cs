@@ -80,10 +80,19 @@ namespace Employee_Management_System
         {
             DialogResult Res = MessageBox.Show("Logging Out", "Are you Sure??", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            frm_Login LF = new frm_Login();
+            if (Res == DialogResult.Yes)
+            {
+                updateEmployeeDetailsToolStripMenuItem.Visible = false;
+                viewEmployeeDetailsByDeptToolStripMenuItem.Visible = false;
+                reportToolStripMenuItem.Visible = false;
 
-            LF.Show();
-            this.Hide();
+                Global_Vars.User_Role = 0;
+
+                frm_Login Obj = new frm_Login();
+                Obj.Show();
+
+                this.Hide();
+            }
         }
 
         private void updateEmployeeDetailsToolStripMenuItem_Click(object sender, EventArgs e)

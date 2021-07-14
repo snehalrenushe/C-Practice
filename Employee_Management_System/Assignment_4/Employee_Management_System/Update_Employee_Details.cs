@@ -124,5 +124,10 @@ namespace Employee_Management_System
 
             tb_ID.Focus();
         }
+
+        private void frm_Update_Employee_Details_Load(object sender, EventArgs e)
+        {
+            Clear_Controls();
+        }
     }
 }
