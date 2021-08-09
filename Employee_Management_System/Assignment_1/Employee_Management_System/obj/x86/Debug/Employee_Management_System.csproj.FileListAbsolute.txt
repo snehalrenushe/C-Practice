@@ -8,3 +8,14 @@ C:\C#\Employee_Management_System\Employee_Management_System\obj\x86\Debug\Employ
 C:\C#\Employee_Management_System\Employee_Management_System\obj\x86\Debug\Employee_Management_System.frm_Add_Employee_Details.resources
 C:\C#\Employee_Management_System\Employee_Management_System\obj\x86\Debug\Employee_Management_System.frm_View_Employee_Details.resources
 C:\C#\Employee_Management_System\Employee_Management_System\bin\Debug\Employee_Management_System.exe.config
+C:\Users\91842\Desktop\Git C#\Employee_Management_System\Assignment_1\Employee_Management_System\bin\Debug\Employee_Management_System.exe.config
+C:\Users\91842\Desktop\Git C#\Employee_Management_System\Assignment_1\Employee_Management_System\obj\x86\Debug\Employee_Management_System.exe
+C:\Users\91842\Desktop\Git C#\Employee_Management_System\Assignment_1\Employee_Management_System\obj\x86\Debug\Employee_Management_System.pdb
+C:\Users\91842\Desktop\Git C#\Employee_Management_System\Assignment_1\Employee_Management_System\obj\x86\Debug\Employee_Management_System.frm_Add_Employee_Details.resources
+C:\Users\91842\Desktop\Git C#\Employee_Management_System\Assignment_1\Employee_Management_System\obj\x86\Debug\Employee_Management_System.frm_Login.resources
+C:\Users\91842\Desktop\Git C#\Employee_Management_System\Assignment_1\Employee_Management_System\obj\x86\Debug\Employee_Management_System.Properties.Resources.resources
+C:\Users\91842\Desktop\Git C#\Employee_Management_System\Assignment_1\Employee_Management_System\obj\x86\Debug\Employee_Management_System.frm_View_Employee_Details.resources
+C:\Users\91842\Desktop\Git C#\Employee_Management_System\Assignment_1\Employee_Management_System\obj\x86\Debug\Employee_Management_System.csproj.GenerateResource.Cache
+C:\Users\91842\Desktop\Git C#\Employee_Management_System\Assignment_1\Employee_Management_System\bin\Debug\Employee_Management_System.exe
+C:\Users\91842\Desktop\Git C#\Employee_Management_System\Assignment_1\Employee_Management_System\bin\Debug\Employee_Management_System.pdb
+C:\Users\91842\Desktop\Git C#\Employee_Management_System\Assignment_1\Employee_Management_System\obj\x86\Debug\Employee_Management_System.csprojResolveAssemblyReference.cache

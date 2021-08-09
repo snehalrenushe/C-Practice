@@ -21,7 +21,7 @@ namespace Employee_Management_System
 
         void Con_Open()
         {
-            if (Con.State == ConnectionState.Closed)
+            if(Con.State == ConnectionState.Closed)
             {
                 Con.Open();
             }
@@ -29,7 +29,7 @@ namespace Employee_Management_System
 
         void Con_Close()
         {
-            if (Con.State == ConnectionState.Open)
+            if(Con.State == ConnectionState.Open)
             {
                 Con.Close();
             }
@@ -98,5 +98,6 @@ namespace Employee_Management_System
 
             this.Hide();
         }
+
     }
 }

@@ -16,11 +16,6 @@ namespace Employee_Management_System
             InitializeComponent();
         }
 
-        private void frm_Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Submit_Click(object sender, EventArgs e)
         {
             if(tb_Username.Text == "admin" && tb_Password.Text == "a123")
