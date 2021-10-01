@@ -156,5 +156,6 @@ namespace Employee_Management_System
             Clear_Controls();
             lbl_Logged_In_Username.Text = "Welcome " + Global_Vars.Uname;
         }
+
     }
 }
