@@ -12,6 +12,7 @@ namespace Student_Management_System
 {
     public partial class frm_Update_Student_Details : Form
     {
+        Add_Student AS = new Add_Student();
         public frm_Update_Student_Details()
         {
             InitializeComponent();
@@ -96,33 +97,16 @@ namespace Student_Management_System
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            Con_Open();
-
             if (tb_Roll_No.Text != "" && tb_Name.Text != "" && dtp_Date_Of_Birth.Text != "" && tb_Mobile_No.TextLength == 10 && cb_Course.Text != "")
             {
-                SqlCommand Cmd = new SqlCommand();
-
-                Cmd.Connection = Con;
-
-                Cmd.CommandText = "UPDATE Student_Details Set Name = @Name,Mobile_No = @Mobile_No,Course = @Course Where Roll_No = @Roll_No";
-
-                Cmd.Parameters.Add("Name", SqlDbType.VarChar).Value = tb_Name.Text;
-                Cmd.Parameters.Add("Mobile_No", SqlDbType.Decimal).Value = tb_Mobile_No.Text;
-                Cmd.Parameters.Add("Course", SqlDbType.NVarChar).Value = cb_Course.Text;
-                Cmd.Parameters.Add("Roll_No", SqlDbType.Int).Value = tb_Roll_No.Text;
-
-                Cmd.ExecuteNonQuery();
+                AS.insertrecord("UPDATE Student_Details Set Name = '" + tb_Name.Text +"',Mobile_No = " + tb_Mobile_No.Text + ",Course = '" + cb_Course.Text + "' Where Roll_No = " + tb_Roll_No.Text + "");
 
                 MessageBox.Show("Details Saved Sucessfully!!!", "Saving", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                btn_Reset.PerformClick();
             }
             else
             {
                 MessageBox.Show("Incomplete Information..");
             }
-
-            Con_Close();
         }
 
         private void frm_Update_Student_Details_Load(object sender, EventArgs e)

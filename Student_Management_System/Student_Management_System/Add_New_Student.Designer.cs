@@ -106,6 +106,7 @@
             this.tb_Roll_No.Name = "tb_Roll_No";
             this.tb_Roll_No.Size = new System.Drawing.Size(415, 44);
             this.tb_Roll_No.TabIndex = 1;
+        
             this.tb_Roll_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // lbl_Date_Of_Birth

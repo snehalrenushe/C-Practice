@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.btn_Log_Out = new System.Windows.Forms.Button();
+            this.lbl_Logged_In_User = new System.Windows.Forms.Label();
             this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,27 +40,35 @@
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notepadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_Log_Out = new System.Windows.Forms.Button();
-            this.lbl_Logged_In_User = new System.Windows.Forms.Label();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip
+            // btn_Log_Out
             // 
-            this.menuStrip.Font = new System.Drawing.Font("Palatino Linotype", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.studentToolStripMenuItem,
-            this.viewDetailsToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.reportsToolStripMenuItem});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip.Size = new System.Drawing.Size(1385, 47);
-            this.menuStrip.TabIndex = 0;
-            this.menuStrip.Text = "MenuStrip";
+            this.btn_Log_Out.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Log_Out.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Log_Out.ForeColor = System.Drawing.Color.Navy;
+            this.btn_Log_Out.Location = new System.Drawing.Point(1094, 0);
+            this.btn_Log_Out.Name = "btn_Log_Out";
+            this.btn_Log_Out.Size = new System.Drawing.Size(126, 47);
+            this.btn_Log_Out.TabIndex = 24;
+            this.btn_Log_Out.Text = "Log Out";
+            this.btn_Log_Out.UseVisualStyleBackColor = true;
+            this.btn_Log_Out.Click += new System.EventHandler(this.btn_Log_Out_Click);
+            // 
+            // lbl_Logged_In_User
+            // 
+            this.lbl_Logged_In_User.AutoSize = true;
+            this.lbl_Logged_In_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lbl_Logged_In_User.Font = new System.Drawing.Font("Monotype Corsiva", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Logged_In_User.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Logged_In_User.Location = new System.Drawing.Point(912, 13);
+            this.lbl_Logged_In_User.Name = "lbl_Logged_In_User";
+            this.lbl_Logged_In_User.Size = new System.Drawing.Size(166, 24);
+            this.lbl_Logged_In_User.TabIndex = 25;
+            this.lbl_Logged_In_User.Text = "Logged In User Name";
             // 
             // studentToolStripMenuItem
             // 
@@ -140,37 +149,28 @@
             this.calculatorToolStripMenuItem.Text = "Calculator";
             this.calculatorToolStripMenuItem.Click += new System.EventHandler(this.calculatorToolStripMenuItem_Click);
             // 
-            // btn_Log_Out
-            // 
-            this.btn_Log_Out.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Log_Out.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Log_Out.ForeColor = System.Drawing.Color.Navy;
-            this.btn_Log_Out.Location = new System.Drawing.Point(1094, 0);
-            this.btn_Log_Out.Name = "btn_Log_Out";
-            this.btn_Log_Out.Size = new System.Drawing.Size(126, 47);
-            this.btn_Log_Out.TabIndex = 24;
-            this.btn_Log_Out.Text = "Log Out";
-            this.btn_Log_Out.UseVisualStyleBackColor = true;
-            this.btn_Log_Out.Click += new System.EventHandler(this.btn_Log_Out_Click);
-            // 
-            // lbl_Logged_In_User
-            // 
-            this.lbl_Logged_In_User.AutoSize = true;
-            this.lbl_Logged_In_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lbl_Logged_In_User.Font = new System.Drawing.Font("Monotype Corsiva", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Logged_In_User.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Logged_In_User.Location = new System.Drawing.Point(912, 13);
-            this.lbl_Logged_In_User.Name = "lbl_Logged_In_User";
-            this.lbl_Logged_In_User.Size = new System.Drawing.Size(166, 24);
-            this.lbl_Logged_In_User.TabIndex = 25;
-            this.lbl_Logged_In_User.Text = "Logged In User Name";
-            // 
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(123, 41);
             this.reportsToolStripMenuItem.Text = "Reports";
             this.reportsToolStripMenuItem.Visible = false;
+            // 
+            // menuStrip
+            // 
+            this.menuStrip.Font = new System.Drawing.Font("Palatino Linotype", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.studentToolStripMenuItem,
+            this.viewDetailsToolStripMenuItem,
+            this.toolsToolStripMenuItem,
+            this.reportsToolStripMenuItem});
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.menuStrip.Size = new System.Drawing.Size(1385, 47);
+            this.menuStrip.TabIndex = 0;
+            this.menuStrip.Text = "MenuStrip";
             // 
             // MDI_Student_Management_Application
             // 
@@ -197,8 +197,8 @@
         }
         #endregion
 
-
-        private System.Windows.Forms.MenuStrip menuStrip;
+        private System.Windows.Forms.Button btn_Log_Out;
+        private System.Windows.Forms.Label lbl_Logged_In_User;
         private System.Windows.Forms.ToolStripMenuItem studentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addStudentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateStudentToolStripMenuItem;
@@ -209,9 +209,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem notepadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculatorToolStripMenuItem;
-        private System.Windows.Forms.Button btn_Log_Out;
-        private System.Windows.Forms.Label lbl_Logged_In_User;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip;
     }
 }
 

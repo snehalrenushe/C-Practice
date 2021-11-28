@@ -85,11 +85,11 @@
             this.dgv_View_Student_Details_By_Course.BackgroundColor = System.Drawing.Color.PowderBlue;
             this.dgv_View_Student_Details_By_Course.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_View_Student_Details_By_Course.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgv_View_Student_Details_By_Course.Location = new System.Drawing.Point(0, 277);
+            this.dgv_View_Student_Details_By_Course.Location = new System.Drawing.Point(0, 264);
             this.dgv_View_Student_Details_By_Course.Name = "dgv_View_Student_Details_By_Course";
             this.dgv_View_Student_Details_By_Course.ReadOnly = true;
             this.dgv_View_Student_Details_By_Course.RowTemplate.Height = 28;
-            this.dgv_View_Student_Details_By_Course.Size = new System.Drawing.Size(1359, 440);
+            this.dgv_View_Student_Details_By_Course.Size = new System.Drawing.Size(1359, 453);
             this.dgv_View_Student_Details_By_Course.TabIndex = 33;
             // 
             // btn_Refresh

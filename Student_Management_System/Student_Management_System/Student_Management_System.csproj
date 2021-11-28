@@ -52,6 +52,7 @@
     <Compile Include="Add_New_Student.Designer.cs">
       <DependentUpon>Add_New_Student.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add_Student.cs" />
     <Compile Include="DB_Student_Management_SystemDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -63,7 +64,9 @@
     <Compile Include="frm_Login.Designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="global.cs" />
     <Compile Include="Global_Vars.cs" />
+    <Compile Include="Gobj.cs" />
     <Compile Include="MDI_Student_Management_Application.cs">
       <SubType>Form</SubType>
     </Compile>

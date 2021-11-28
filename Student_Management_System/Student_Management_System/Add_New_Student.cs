@@ -12,28 +12,15 @@ namespace Student_Management_System
 {
     public partial class frm_Add_New_Student : Form
     {
+        global Gobj = new global();
+        Add_Student AS = new Add_Student();
+
         public frm_Add_New_Student()
         {
             InitializeComponent();
         }
 
-        SqlConnection Con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=DB_Student_Management_System;Integrated Security=True");
-
-        void Con_Open()
-        {
-            if (Con.State == ConnectionState.Closed)
-            {
-                Con.Open();
-            }
-        }
-
-        void Con_Close()
-        {
-            if (Con.State == ConnectionState.Open)
-            {
-                Con.Close();
-            }
-        }
+        
 
         void Clear_Controls()
         {
@@ -49,13 +36,13 @@ namespace Student_Management_System
 
         int Auto_Increament()
         {
-            Con_Open();
+            Gobj.Con_Open();
 
             int Cnt = -1;
 
             SqlCommand Cmd = new SqlCommand();
 
-            Cmd.Connection = Con;
+            Cmd.Connection = Gobj.Con;
             Cmd.CommandText = "Select Count(*) From Student_Details";
 
             Cnt = Convert.ToInt32(Cmd.ExecuteScalar());
@@ -64,7 +51,7 @@ namespace Student_Management_System
 
             if (Cnt > 0)
             {
-                Cmd.Connection = Con;
+                Cmd.Connection = Gobj.Con;
                 Cmd.CommandText = "Select Max(Roll_No) From Student_Details";
 
                 Cnt = Convert.ToInt32(Cmd.ExecuteScalar()) + 1;
@@ -74,7 +61,7 @@ namespace Student_Management_System
                 Cnt = 1;
             }
 
-            Con_Close();
+            Gobj.Con_Close();
 
             return Cnt;
 
@@ -102,33 +89,17 @@ namespace Student_Management_System
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            Con_Open();
-
             if (tb_Roll_No.Text != "" && tb_Name.Text != "" && dtp_Date_Of_Birth.Text != "" && tb_Mobile_No.TextLength == 10 && cb_Course.Text != "")
             {
-                SqlCommand Cmd = new SqlCommand();
+                AS.insertrecord("Insert into Student_Details(Roll_No,Name,DOB,Mobile_No,Course) VALUES (" + tb_Roll_No.Text + " , '" + tb_Name.Text + "', '" + dtp_Date_Of_Birth.Text + "'," + tb_Mobile_No.Text + ",'" + cb_Course.Text + "')");
 
-                Cmd.Connection = Con;
-
-                Cmd.CommandText = "INSERT into Student_Details(Roll_No,Name,DOB,Mobile_No,Course) VALUES (@Roll_No,@Name,@Date_Of_Birth,@Mobile_No,@Course)";
-
-                Cmd.Parameters.Add("Roll_No", SqlDbType.Int).Value = tb_Roll_No.Text;
-                Cmd.Parameters.Add("Name", SqlDbType.VarChar).Value = tb_Name.Text;
-                Cmd.Parameters.Add("Date_Of_Birth", SqlDbType.Date).Value = dtp_Date_Of_Birth.Value.Date;
-                Cmd.Parameters.Add("Mobile_No", SqlDbType.Decimal).Value = tb_Mobile_No.Text;
-                Cmd.Parameters.Add("Course", SqlDbType.NVarChar).Value = cb_Course.Text;
-
-                Cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Details Saved Sucessfully!!!", "Saving", MessageBoxButtons.OK, MessageBoxIcon.Information);      
+                MessageBox.Show("Details Saved Sucessfully!!!", "Saving", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
             {
                 MessageBox.Show("Incomplete Information..");
             }
-
-            Con_Close();
 
             Clear_Controls();
 
