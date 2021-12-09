@@ -27,5 +27,38 @@ namespace Student_Management_System
             }
         }
 
+        public int Auto_Increament(string str1,string str2,int startNo)
+        {
+            Con_Open();
+
+            int Cnt = -1;
+
+            SqlCommand Cmd = new SqlCommand();
+
+            Cmd.Connection = Con;
+            Cmd.CommandText = str1;
+
+            Cnt = Convert.ToInt32(Cmd.ExecuteScalar());
+
+            Cmd.Dispose();
+
+            if (Cnt > 0)
+            {
+                Cmd.Connection = Con;
+                Cmd.CommandText = str2;
+
+                Cnt = Convert.ToInt32(Cmd.ExecuteScalar()) + 1;
+            }
+            else
+            {
+                Cnt = startNo;
+            }
+
+            Con_Close();
+
+            return Cnt;  
+
+        }   
+
     }
 }

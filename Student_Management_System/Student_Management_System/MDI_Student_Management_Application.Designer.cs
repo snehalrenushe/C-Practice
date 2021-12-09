@@ -69,6 +69,7 @@
             this.lbl_Logged_In_User.Size = new System.Drawing.Size(166, 24);
             this.lbl_Logged_In_User.TabIndex = 25;
             this.lbl_Logged_In_User.Text = "Logged In User Name";
+            this.lbl_Logged_In_User.Click += new System.EventHandler(this.lbl_Logged_In_User_Click);
             // 
             // studentToolStripMenuItem
             // 

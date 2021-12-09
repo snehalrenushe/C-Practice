@@ -18,7 +18,7 @@ namespace Student_Management_System
 
         private void MDI_Student_Management_Application_Load(object sender, EventArgs e)
         {
-            lbl_Logged_In_User.Text = Global_Vars.Uname;
+            lbl_Logged_In_User.Text = "Welcome " + Global_Vars.Uname;
 
             if (Global_Vars.User_Role == 1)
             {
@@ -100,6 +100,11 @@ namespace Student_Management_System
 
                 this.Hide();
             }
+        }
+
+        private void lbl_Logged_In_User_Click(object sender, EventArgs e)
+        {
+
         }
        
     }

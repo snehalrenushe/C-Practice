@@ -20,11 +20,9 @@ namespace Student_Management_System
             InitializeComponent();
         }
 
-        
-
         void Clear_Controls()
         {
-            tb_Roll_No.Text = Convert.ToString(Auto_Increament());
+            tb_Roll_No.Text = Gobj.Auto_Increament("Select Count(*) From Student_Details", "Select Max(Roll_No) From Student_Details", 1).ToString();
 
             tb_Name.Clear();
             dtp_Date_Of_Birth.ResetText();
@@ -34,38 +32,6 @@ namespace Student_Management_System
             tb_Roll_No.Focus();
         }
 
-        int Auto_Increament()
-        {
-            Gobj.Con_Open();
-
-            int Cnt = -1;
-
-            SqlCommand Cmd = new SqlCommand();
-
-            Cmd.Connection = Gobj.Con;
-            Cmd.CommandText = "Select Count(*) From Student_Details";
-
-            Cnt = Convert.ToInt32(Cmd.ExecuteScalar());
-
-            Cmd.Dispose();
-
-            if (Cnt > 0)
-            {
-                Cmd.Connection = Gobj.Con;
-                Cmd.CommandText = "Select Max(Roll_No) From Student_Details";
-
-                Cnt = Convert.ToInt32(Cmd.ExecuteScalar()) + 1;
-            }
-            else
-            {
-                Cnt = 1;
-            }
-
-            Gobj.Con_Close();
-
-            return Cnt;
-
-        }
         private void Only_Numeric(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
