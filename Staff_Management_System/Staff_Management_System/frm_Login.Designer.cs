@@ -68,7 +68,7 @@
             this.lbl_Username.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_Username.Font = new System.Drawing.Font("Rockwell", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Username.ForeColor = System.Drawing.Color.Navy;
-            this.lbl_Username.Location = new System.Drawing.Point(239, 312);
+            this.lbl_Username.Location = new System.Drawing.Point(239, 315);
             this.lbl_Username.Name = "lbl_Username";
             this.lbl_Username.Size = new System.Drawing.Size(226, 49);
             this.lbl_Username.TabIndex = 3;
@@ -144,7 +144,7 @@
             this.Name = "frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";
-            this.TransparencyKey = System.Drawing.Color.White;
+            this.TransparencyKey = System.Drawing.Color.Black;
             this.ResumeLayout(false);
             this.PerformLayout();
 

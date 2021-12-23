@@ -12,3 +12,4 @@ C:\C#\Staff_Management_System\Staff_Management_System\bin\Debug\Staff_Management
 C:\C#\Staff_Management_System\Staff_Management_System\bin\Debug\Staff_Management_System.pdb
 C:\C#\Staff_Management_System\Staff_Management_System\obj\x86\Debug\Staff_Management_System.exe
 C:\C#\Staff_Management_System\Staff_Management_System\obj\x86\Debug\Staff_Management_System.pdb
+C:\C#\Staff_Management_System\Staff_Management_System\bin\Debug\Staff_Management_System.exe.config

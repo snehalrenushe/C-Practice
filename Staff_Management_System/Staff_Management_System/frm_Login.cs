@@ -15,9 +15,9 @@ namespace Staff_Management_System
         {
             InitializeComponent();
         }
-
         private void btn_Submit_Click(object sender, EventArgs e)
         {
+
             MDI_Staff_Management_System SMS = new MDI_Staff_Management_System();
 
             SMS.Show();

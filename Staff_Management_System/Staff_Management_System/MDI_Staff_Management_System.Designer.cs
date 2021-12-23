@@ -182,6 +182,7 @@
             this.Name = "MDI_Staff_Management_System";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Staff Management System";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MDI_Staff_Management_System_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();

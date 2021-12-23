@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB_Staff_Management_SystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_Staff_Management_SystemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frm_Add_New_Staff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +134,18 @@
     <EmbeddedResource Include="frm_Update_Staff.resx">
       <DependentUpon>frm_Update_Staff.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="DB_Staff_Management_SystemDataSet.xsc">
+      <DependentUpon>DB_Staff_Management_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_Staff_Management_SystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_Staff_Management_SystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_Staff_Management_SystemDataSet.xss">
+      <DependentUpon>DB_Staff_Management_SystemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

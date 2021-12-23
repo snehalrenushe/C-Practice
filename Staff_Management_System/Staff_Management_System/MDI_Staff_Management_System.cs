@@ -30,7 +30,7 @@ namespace Staff_Management_System
             frm_Add_Department AD = new frm_Add_Department();
 
             AD.MdiParent = this;
-            AD.WindowState = FormWindowState.Maximized;
+            AD.StartPosition = FormStartPosition.CenterScreen;
             AD.Show();
         }
 

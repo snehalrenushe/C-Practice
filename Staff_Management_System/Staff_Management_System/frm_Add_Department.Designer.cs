@@ -48,6 +48,7 @@
             this.btn_Save.TabIndex = 15;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // tb_Department_Name
             // 
@@ -116,6 +117,7 @@
             this.btn_Close.TabIndex = 16;
             this.btn_Close.Text = "Close";
             this.btn_Close.UseVisualStyleBackColor = false;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // frm_Add_Department
             // 

@@ -15,5 +15,10 @@ namespace Staff_Management_System
         {
             InitializeComponent();
         }
+
+        private void frm_Add_New_Staff_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
