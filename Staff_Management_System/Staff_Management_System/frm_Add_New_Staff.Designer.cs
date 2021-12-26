@@ -435,7 +435,7 @@
             this.btn_Submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btn_Submit.Font = new System.Drawing.Font("Rockwell", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Submit.ForeColor = System.Drawing.Color.Red;
-            this.btn_Submit.Location = new System.Drawing.Point(868, 795);
+            this.btn_Submit.Location = new System.Drawing.Point(836, 795);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(202, 57);
             this.btn_Submit.TabIndex = 28;

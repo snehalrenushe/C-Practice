@@ -11,6 +11,7 @@ namespace Staff_Management_System
 {
     public partial class MDI_Staff_Management_System : Form
     {
+
         public MDI_Staff_Management_System()
         {
             InitializeComponent();
@@ -51,6 +52,7 @@ namespace Staff_Management_System
             ANU.WindowState = FormWindowState.Maximized;
             ANU.Show();
         }
+
         private void updateStaffToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
