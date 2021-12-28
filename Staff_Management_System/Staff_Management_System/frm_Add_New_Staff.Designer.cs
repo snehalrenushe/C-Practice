@@ -40,9 +40,9 @@
             this.dtp_Date_Of_Birth = new System.Windows.Forms.DateTimePicker();
             this.cb_Designation = new System.Windows.Forms.ComboBox();
             this.gb_Add_Staff = new System.Windows.Forms.GroupBox();
-            this.tb_Hobbies = new System.Windows.Forms.TextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tb_Description = new System.Windows.Forms.TextBox();
+            this.clb_Hobbies = new System.Windows.Forms.CheckedListBox();
+            this.gb_Department = new System.Windows.Forms.GroupBox();
             this.cb_McDonalds = new System.Windows.Forms.CheckBox();
             this.cb_Tata = new System.Windows.Forms.CheckBox();
             this.cb_DMart = new System.Windows.Forms.CheckBox();
@@ -63,7 +63,7 @@
             this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
             this.gb_Add_Staff.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gb_Department.SuspendLayout();
             this.gb_Shift_Timing.SuspendLayout();
             this.gb_Gender.SuspendLayout();
             this.SuspendLayout();
@@ -182,6 +182,13 @@
             // 
             this.cb_Designation.Font = new System.Drawing.Font("Rockwell", 14F);
             this.cb_Designation.FormattingEnabled = true;
+            this.cb_Designation.Items.AddRange(new object[] {
+            "BCS",
+            "BCA",
+            "BSC",
+            "MBA",
+            "BCOM",
+            "BA"});
             this.cb_Designation.Location = new System.Drawing.Point(349, 439);
             this.cb_Designation.Name = "cb_Designation";
             this.cb_Designation.Size = new System.Drawing.Size(363, 39);
@@ -189,9 +196,9 @@
             // 
             // gb_Add_Staff
             // 
-            this.gb_Add_Staff.Controls.Add(this.tb_Hobbies);
-            this.gb_Add_Staff.Controls.Add(this.checkedListBox1);
-            this.gb_Add_Staff.Controls.Add(this.groupBox3);
+            this.gb_Add_Staff.Controls.Add(this.tb_Description);
+            this.gb_Add_Staff.Controls.Add(this.clb_Hobbies);
+            this.gb_Add_Staff.Controls.Add(this.gb_Department);
             this.gb_Add_Staff.Controls.Add(this.cb_Department);
             this.gb_Add_Staff.Controls.Add(this.gb_Shift_Timing);
             this.gb_Add_Staff.Controls.Add(this.gb_Gender);
@@ -217,41 +224,44 @@
             this.gb_Add_Staff.TabStop = false;
             this.gb_Add_Staff.Text = "Add Staff";
             // 
-            // tb_Hobbies
+            // tb_Description
             // 
-            this.tb_Hobbies.Location = new System.Drawing.Point(1285, 429);
-            this.tb_Hobbies.MaxLength = 20;
-            this.tb_Hobbies.Multiline = true;
-            this.tb_Hobbies.Name = "tb_Hobbies";
-            this.tb_Hobbies.Size = new System.Drawing.Size(266, 81);
-            this.tb_Hobbies.TabIndex = 36;
+            this.tb_Description.BackColor = System.Drawing.Color.LightGray;
+            this.tb_Description.Enabled = false;
+            this.tb_Description.Location = new System.Drawing.Point(1285, 429);
+            this.tb_Description.MaxLength = 20;
+            this.tb_Description.Multiline = true;
+            this.tb_Description.Name = "tb_Description";
+            this.tb_Description.Size = new System.Drawing.Size(266, 81);
+            this.tb_Description.TabIndex = 36;
+            this.tb_Description.TextChanged += new System.EventHandler(this.tb_Description_TextChanged);
             // 
-            // checkedListBox1
+            // clb_Hobbies
             // 
-            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.clb_Hobbies.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clb_Hobbies.FormattingEnabled = true;
+            this.clb_Hobbies.Items.AddRange(new object[] {
             "Drawing",
             "Reading",
-            "Swimming",
             "Singing",
             "Dancing"});
-            this.checkedListBox1.Location = new System.Drawing.Point(1114, 429);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(165, 130);
-            this.checkedListBox1.TabIndex = 35;
+            this.clb_Hobbies.Location = new System.Drawing.Point(1114, 429);
+            this.clb_Hobbies.Name = "clb_Hobbies";
+            this.clb_Hobbies.Size = new System.Drawing.Size(165, 124);
+            this.clb_Hobbies.TabIndex = 35;
+            this.clb_Hobbies.SelectedIndexChanged += new System.EventHandler(this.clb_Hobbies_SelectedIndexChanged);
             // 
-            // groupBox3
+            // gb_Department
             // 
-            this.groupBox3.Controls.Add(this.cb_McDonalds);
-            this.groupBox3.Controls.Add(this.cb_Tata);
-            this.groupBox3.Controls.Add(this.cb_DMart);
-            this.groupBox3.Font = new System.Drawing.Font("Rockwell", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(1114, 314);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(437, 56);
-            this.groupBox3.TabIndex = 34;
-            this.groupBox3.TabStop = false;
+            this.gb_Department.Controls.Add(this.cb_McDonalds);
+            this.gb_Department.Controls.Add(this.cb_Tata);
+            this.gb_Department.Controls.Add(this.cb_DMart);
+            this.gb_Department.Font = new System.Drawing.Font("Rockwell", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gb_Department.Location = new System.Drawing.Point(1114, 314);
+            this.gb_Department.Name = "gb_Department";
+            this.gb_Department.Size = new System.Drawing.Size(437, 56);
+            this.gb_Department.TabIndex = 34;
+            this.gb_Department.TabStop = false;
             // 
             // cb_McDonalds
             // 
@@ -441,6 +451,7 @@
             this.btn_Submit.TabIndex = 28;
             this.btn_Submit.Text = "Submit";
             this.btn_Submit.UseVisualStyleBackColor = false;
+            this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
             // btn_Refresh
             // 
@@ -484,8 +495,8 @@
             this.Load += new System.EventHandler(this.frm_Add_New_Staff_Load);
             this.gb_Add_Staff.ResumeLayout(false);
             this.gb_Add_Staff.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gb_Department.ResumeLayout(false);
+            this.gb_Department.PerformLayout();
             this.gb_Shift_Timing.ResumeLayout(false);
             this.gb_Shift_Timing.PerformLayout();
             this.gb_Gender.ResumeLayout(false);
@@ -509,9 +520,9 @@
         private System.Windows.Forms.DateTimePicker dtp_Date_Of_Birth;
         private System.Windows.Forms.ComboBox cb_Designation;
         private System.Windows.Forms.GroupBox gb_Add_Staff;
-        private System.Windows.Forms.TextBox tb_Hobbies;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox tb_Description;
+        private System.Windows.Forms.CheckedListBox clb_Hobbies;
+        private System.Windows.Forms.GroupBox gb_Department;
         private System.Windows.Forms.CheckBox cb_McDonalds;
         private System.Windows.Forms.CheckBox cb_Tata;
         private System.Windows.Forms.CheckBox cb_DMart;
