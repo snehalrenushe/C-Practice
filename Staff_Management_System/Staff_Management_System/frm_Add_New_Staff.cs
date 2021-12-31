@@ -35,6 +35,12 @@ namespace Staff_Management_System
             }
         }
 
+        private void frm_Add_New_Staff_Load(object sender, EventArgs e)
+        {
+            tb_Staff_ID.Text = Convert.ToString(Auto_Increament());
+            Bind_Department();
+        }
+
         void Bind_Department()
         {
             Con_Open();
@@ -55,12 +61,6 @@ namespace Staff_Management_System
             obj.Dispose();
 
             Con_Close();
-        }
-
-        private void frm_Add_New_Staff_Load(object sender, EventArgs e)
-        {
-            tb_Staff_ID.Text = Convert.ToString(Auto_Increament());
-            Bind_Department();
         }
 
         int Auto_Increament()
@@ -98,7 +98,7 @@ namespace Staff_Management_System
 
         void Clear_Controls()
         {
-            tb_Staff_ID.Clear();
+            tb_Staff_ID.Text = Convert.ToString(Auto_Increament());
             tb_Staff_Name.Clear();
             dtp_Date_Of_Birth.ResetText();
             tb_Mobile_No.Clear();
@@ -106,9 +106,17 @@ namespace Staff_Management_System
             gb_Gender.ResetText();
             gb_Shift_Timing.ResetText();
             cb_Department.ResetText();
-            clb_Hobbies.ResetText();
             tb_Description.Clear();
 
+            foreach (int itemChecked in clb_Hobbies.CheckedIndices)
+            {
+                clb_Hobbies.SetItemChecked(itemChecked,false);
+            }
+
+            foreach (object itemChecked in clb_Hobbies.CheckedItems)
+            {
+                clb_Hobbies.SetItemChecked(clb_Hobbies.Items.IndexOf(itemChecked),false);
+            }
         }
 
         private void btn_Submit_Click(object sender, EventArgs e)
@@ -231,6 +239,11 @@ namespace Staff_Management_System
         private void tb_Description_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            Clear_Controls();
         }
     }
 }
