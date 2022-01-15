@@ -87,6 +87,7 @@
     <Compile Include="frm_View_Staff.Designer.cs">
       <DependentUpon>frm_View_Staff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global_Vars.cs" />
     <Compile Include="MDI_Staff_Management_System.cs">
       <SubType>Form</SubType>
     </Compile>

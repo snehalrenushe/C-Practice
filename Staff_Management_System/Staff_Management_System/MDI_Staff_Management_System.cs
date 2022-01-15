@@ -44,14 +44,14 @@ namespace Staff_Management_System
             VD.Show();
         }
 
-        private void addNewUserToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frm_Add_New_User ANU = new frm_Add_New_User();
+        //private void addNewUserToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    frm_Add_New_User ANU = new frm_Add_New_User();
 
-            ANU.MdiParent = this;
-            ANU.WindowState = FormWindowState.Maximized;
-            ANU.Show();
-        }
+        //    ANU.MdiParent = this;
+        //    ANU.WindowState = FormWindowState.Maximized;
+        //    ANU.Show();
+        //}
 
         private void updateStaffToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -66,6 +66,15 @@ namespace Staff_Management_System
         private void MDI_Staff_Management_System_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void userManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Add_New_User ANU = new frm_Add_New_User();
+
+            ANU.MdiParent = this;
+            ANU.WindowState = FormWindowState.Maximized;
+            ANU.Show();
         }
         
     }
