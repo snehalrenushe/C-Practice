@@ -37,6 +37,10 @@
             this.addDepartmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewDepartmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coursesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vieCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Log_Out = new System.Windows.Forms.Button();
             this.lbl_Logged_In_User = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
@@ -48,7 +52,8 @@
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.staffToolStripMenuItem,
             this.departmentToolStripMenuItem,
-            this.userManagementToolStripMenuItem});
+            this.userManagementToolStripMenuItem,
+            this.coursesToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
@@ -78,14 +83,12 @@
             this.updateStaffToolStripMenuItem.Name = "updateStaffToolStripMenuItem";
             this.updateStaffToolStripMenuItem.Size = new System.Drawing.Size(337, 54);
             this.updateStaffToolStripMenuItem.Text = "Update Staff";
-            this.updateStaffToolStripMenuItem.Click += new System.EventHandler(this.updateStaffToolStripMenuItem_Click);
             // 
             // staffListToolStripMenuItem
             // 
             this.staffListToolStripMenuItem.Name = "staffListToolStripMenuItem";
             this.staffListToolStripMenuItem.Size = new System.Drawing.Size(337, 54);
             this.staffListToolStripMenuItem.Text = "Staff List";
-            this.staffListToolStripMenuItem.Click += new System.EventHandler(this.staffListToolStripMenuItem_Click);
             // 
             // departmentToolStripMenuItem
             // 
@@ -115,7 +118,36 @@
             this.userManagementToolStripMenuItem.Name = "userManagementToolStripMenuItem";
             this.userManagementToolStripMenuItem.Size = new System.Drawing.Size(395, 54);
             this.userManagementToolStripMenuItem.Text = "User Management";
+            this.userManagementToolStripMenuItem.Visible = false;
             this.userManagementToolStripMenuItem.Click += new System.EventHandler(this.userManagementToolStripMenuItem_Click);
+            // 
+            // coursesToolStripMenuItem
+            // 
+            this.coursesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addCourseToolStripMenuItem,
+            this.updateCourseToolStripMenuItem,
+            this.vieCourseToolStripMenuItem});
+            this.coursesToolStripMenuItem.Name = "coursesToolStripMenuItem";
+            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(194, 54);
+            this.coursesToolStripMenuItem.Text = "Courses";
+            // 
+            // addCourseToolStripMenuItem
+            // 
+            this.addCourseToolStripMenuItem.Name = "addCourseToolStripMenuItem";
+            this.addCourseToolStripMenuItem.Size = new System.Drawing.Size(436, 54);
+            this.addCourseToolStripMenuItem.Text = "Add Course";
+            // 
+            // updateCourseToolStripMenuItem
+            // 
+            this.updateCourseToolStripMenuItem.Name = "updateCourseToolStripMenuItem";
+            this.updateCourseToolStripMenuItem.Size = new System.Drawing.Size(436, 54);
+            this.updateCourseToolStripMenuItem.Text = "Update Course";
+            // 
+            // vieCourseToolStripMenuItem
+            // 
+            this.vieCourseToolStripMenuItem.Name = "vieCourseToolStripMenuItem";
+            this.vieCourseToolStripMenuItem.Size = new System.Drawing.Size(436, 54);
+            this.vieCourseToolStripMenuItem.Text = "View Course List";
             // 
             // btn_Log_Out
             // 
@@ -129,6 +161,7 @@
             this.btn_Log_Out.TabIndex = 8;
             this.btn_Log_Out.Text = "Log Out";
             this.btn_Log_Out.UseVisualStyleBackColor = false;
+            this.btn_Log_Out.Click += new System.EventHandler(this.btn_Log_Out_Click);
             // 
             // lbl_Logged_In_User
             // 
@@ -136,7 +169,7 @@
             this.lbl_Logged_In_User.BackColor = System.Drawing.Color.GreenYellow;
             this.lbl_Logged_In_User.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Logged_In_User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lbl_Logged_In_User.Location = new System.Drawing.Point(1486, 12);
+            this.lbl_Logged_In_User.Location = new System.Drawing.Point(1241, 12);
             this.lbl_Logged_In_User.Name = "lbl_Logged_In_User";
             this.lbl_Logged_In_User.Size = new System.Drawing.Size(253, 37);
             this.lbl_Logged_In_User.TabIndex = 9;
@@ -179,6 +212,10 @@
         private System.Windows.Forms.ToolStripMenuItem viewDepartmentToolStripMenuItem;
         private System.Windows.Forms.Button btn_Log_Out;
         private System.Windows.Forms.Label lbl_Logged_In_User;
+        private System.Windows.Forms.ToolStripMenuItem coursesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addCourseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateCourseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vieCourseToolStripMenuItem;
     }
 }
 

@@ -133,9 +133,9 @@
             this.cb_Username.FormattingEnabled = true;
             this.cb_Username.Items.AddRange(new object[] {
             "Admin",
-            "Manager",
-            "Cashier",
-            "Staff"});
+            "Fork",
+            "Hiie",
+            "byeee"});
             this.cb_Username.Location = new System.Drawing.Point(794, 315);
             this.cb_Username.MaxLength = 10;
             this.cb_Username.Name = "cb_Username";

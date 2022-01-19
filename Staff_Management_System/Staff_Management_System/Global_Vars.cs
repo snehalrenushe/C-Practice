@@ -9,5 +9,6 @@ namespace Staff_Management_System
     {
         public static string Uname = "User";
         public static int User_Role = 0;
+        public static int UID = 0;
     }
 }

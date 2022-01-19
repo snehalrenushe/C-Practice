@@ -39,14 +39,15 @@ namespace Staff_Management_System
         {
             Con_Open();
 
-            SqlCommand Cmd = new SqlCommand("Select Count(*) from Login_Details where User_Role = " + Global_Vars.User_Role + " And Username = '" + cb_Username.Text + "' And Password = '" + tb_Password.Text + "'",Con);
+            SqlCommand Cmd = new SqlCommand("Select * from Login_Details where User_Role = " + Global_Vars.User_Role + " And Username = '" + cb_Username.Text + "' And Password = '" + tb_Password.Text + "'",Con);
 
-            int Cnt = Convert.ToInt32(Cmd.ExecuteScalar());
+            SqlDataReader Dr = Cmd.ExecuteReader();
 
-            if (Cnt > 0)
+            if (Dr.Read())
             {
                 MessageBox.Show("Login Successfully!!!", "Saving", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Global_Vars.Uname = "Welcome " + cb_Username.Text;
+                Global_Vars.UID = Convert.ToInt32(Dr["User_Creator_ID"].ToString());
 
                 MDI_Staff_Management_System Obj = new MDI_Staff_Management_System();
                 Obj.Show();
@@ -57,7 +58,9 @@ namespace Staff_Management_System
                 MessageBox.Show("Invalid Username or Password!!!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            cb_User_Role.SelectedIndex = 1;
+            Dr.Close();
+       
+            cb_User_Role.SelectedIndex = 0;
             cb_Username.SelectedIndex = -1;
             tb_Password.Clear();
             tb_Password.Enabled = false;
@@ -107,7 +110,7 @@ namespace Staff_Management_System
                 Global_Vars.User_Role = 4;
             }
 
-            SqlCommand Cmd = new SqlCommand("Select Distinct(Username) from Login_Details where User_Role = '" + URole + "'",Con);
+            SqlCommand Cmd = new SqlCommand("Select Distinct(Username) from Login_Details where User_Role = " + URole + "",Con);
 
             SqlDataReader Obj = Cmd.ExecuteReader();
 

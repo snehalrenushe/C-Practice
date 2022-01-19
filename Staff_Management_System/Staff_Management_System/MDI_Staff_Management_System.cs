@@ -44,37 +44,39 @@ namespace Staff_Management_System
             VD.Show();
         }
 
-        //private void addNewUserToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    frm_Add_New_User ANU = new frm_Add_New_User();
-
-        //    ANU.MdiParent = this;
-        //    ANU.WindowState = FormWindowState.Maximized;
-        //    ANU.Show();
-        //}
-
-        private void updateStaffToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void staffListToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void MDI_Staff_Management_System_Load(object sender, EventArgs e)
         {
+            lbl_Logged_In_User.Text = Global_Vars.Uname;
+            if (Global_Vars.User_Role == 1)
+            {
+                userManagementToolStripMenuItem.Visible = true;
+            }
 
         }
 
         private void userManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_Add_New_User ANU = new frm_Add_New_User();
+            frm_User_Management ANU = new frm_User_Management();
 
             ANU.MdiParent = this;
             ANU.WindowState = FormWindowState.Maximized;
             ANU.Show();
+        }
+
+        private void btn_Log_Out_Click(object sender, EventArgs e)
+        {
+            DialogResult Res = System.Windows.Forms.DialogResult.No;
+                
+            Res = MessageBox.Show("Logging Out", "Are you Sure??", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (Res == System.Windows.Forms.DialogResult.Yes)
+            {
+                frm_Login LG = new frm_Login();
+
+                LG.Show();
+
+                this.Hide();
+            }
         }
         
     }

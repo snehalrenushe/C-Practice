@@ -1,6 +1,6 @@
 ﻿namespace Staff_Management_System
 {
-    partial class frm_Add_New_User
+    partial class frm_User_Management
     {
         /// <summary>
         /// Required designer variable.
@@ -32,12 +32,11 @@
             this.tc_User_Management = new System.Windows.Forms.TabControl();
             this.tp_Add_New_User = new System.Windows.Forms.TabPage();
             this.lbl_Add_User = new System.Windows.Forms.Label();
-            this.cb_Add_Username = new System.Windows.Forms.ComboBox();
             this.tb_Add_Confirm_Password = new System.Windows.Forms.TextBox();
             this.lbl_Add_Confirm_Password = new System.Windows.Forms.Label();
             this.tb_Add_Password = new System.Windows.Forms.TextBox();
             this.cb_Add_User_Role = new System.Windows.Forms.ComboBox();
-            this.btn_Add_Submit = new System.Windows.Forms.Button();
+            this.btn_Save = new System.Windows.Forms.Button();
             this.lbl_Add_Password = new System.Windows.Forms.Label();
             this.lbl_Add_Username = new System.Windows.Forms.Label();
             this.lbl_Add_User_Role = new System.Windows.Forms.Label();
@@ -48,7 +47,7 @@
             this.lbl_Update_Confirm_Password = new System.Windows.Forms.Label();
             this.tb_Update_New_Password = new System.Windows.Forms.TextBox();
             this.cb_Update_User_Role = new System.Windows.Forms.ComboBox();
-            this.btn_Update_Submit = new System.Windows.Forms.Button();
+            this.btn_Update = new System.Windows.Forms.Button();
             this.lbl_Update_New_Password = new System.Windows.Forms.Label();
             this.lbl_Update_Username = new System.Windows.Forms.Label();
             this.lbl_Update_User_Role = new System.Windows.Forms.Label();
@@ -57,10 +56,11 @@
             this.cb_Delete_Username = new System.Windows.Forms.ComboBox();
             this.tb_Delete_Admin_Password = new System.Windows.Forms.TextBox();
             this.cb_Delete_User_Role = new System.Windows.Forms.ComboBox();
-            this.btn_Delete_User = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
             this.lbl_Delete_Admin_Password = new System.Windows.Forms.Label();
             this.lbl_Delete_Username = new System.Windows.Forms.Label();
             this.lbl_Delete_User_Role = new System.Windows.Forms.Label();
+            this.tb_Add_Username = new System.Windows.Forms.TextBox();
             this.tc_User_Management.SuspendLayout();
             this.tp_Add_New_User.SuspendLayout();
             this.tp_Update_User.SuspendLayout();
@@ -93,13 +93,13 @@
             // 
             // tp_Add_New_User
             // 
+            this.tp_Add_New_User.Controls.Add(this.tb_Add_Username);
             this.tp_Add_New_User.Controls.Add(this.lbl_Add_User);
-            this.tp_Add_New_User.Controls.Add(this.cb_Add_Username);
             this.tp_Add_New_User.Controls.Add(this.tb_Add_Confirm_Password);
             this.tp_Add_New_User.Controls.Add(this.lbl_Add_Confirm_Password);
             this.tp_Add_New_User.Controls.Add(this.tb_Add_Password);
             this.tp_Add_New_User.Controls.Add(this.cb_Add_User_Role);
-            this.tp_Add_New_User.Controls.Add(this.btn_Add_Submit);
+            this.tp_Add_New_User.Controls.Add(this.btn_Save);
             this.tp_Add_New_User.Controls.Add(this.lbl_Add_Password);
             this.tp_Add_New_User.Controls.Add(this.lbl_Add_Username);
             this.tp_Add_New_User.Controls.Add(this.lbl_Add_User_Role);
@@ -123,20 +123,6 @@
             this.lbl_Add_User.TabIndex = 27;
             this.lbl_Add_User.Text = "Add User";
             // 
-            // cb_Add_Username
-            // 
-            this.cb_Add_Username.Font = new System.Drawing.Font("Rockwell", 14F);
-            this.cb_Add_Username.FormattingEnabled = true;
-            this.cb_Add_Username.Items.AddRange(new object[] {
-            "Admin",
-            "Manager",
-            "Cashier",
-            "Staff"});
-            this.cb_Add_Username.Location = new System.Drawing.Point(756, 228);
-            this.cb_Add_Username.Name = "cb_Add_Username";
-            this.cb_Add_Username.Size = new System.Drawing.Size(393, 39);
-            this.cb_Add_Username.TabIndex = 26;
-            // 
             // tb_Add_Confirm_Password
             // 
             this.tb_Add_Confirm_Password.Font = new System.Drawing.Font("Rockwell", 12F);
@@ -145,7 +131,7 @@
             this.tb_Add_Confirm_Password.Multiline = true;
             this.tb_Add_Confirm_Password.Name = "tb_Add_Confirm_Password";
             this.tb_Add_Confirm_Password.Size = new System.Drawing.Size(393, 49);
-            this.tb_Add_Confirm_Password.TabIndex = 25;
+            this.tb_Add_Confirm_Password.TabIndex = 4;
             // 
             // lbl_Add_Confirm_Password
             // 
@@ -167,7 +153,7 @@
             this.tb_Add_Password.Multiline = true;
             this.tb_Add_Password.Name = "tb_Add_Password";
             this.tb_Add_Password.Size = new System.Drawing.Size(393, 49);
-            this.tb_Add_Password.TabIndex = 23;
+            this.tb_Add_Password.TabIndex = 3;
             // 
             // cb_Add_User_Role
             // 
@@ -181,19 +167,20 @@
             this.cb_Add_User_Role.Location = new System.Drawing.Point(756, 141);
             this.cb_Add_User_Role.Name = "cb_Add_User_Role";
             this.cb_Add_User_Role.Size = new System.Drawing.Size(393, 39);
-            this.cb_Add_User_Role.TabIndex = 21;
+            this.cb_Add_User_Role.TabIndex = 1;
             // 
-            // btn_Add_Submit
+            // btn_Save
             // 
-            this.btn_Add_Submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn_Add_Submit.Font = new System.Drawing.Font("Rockwell", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Add_Submit.ForeColor = System.Drawing.Color.Red;
-            this.btn_Add_Submit.Location = new System.Drawing.Point(567, 486);
-            this.btn_Add_Submit.Name = "btn_Add_Submit";
-            this.btn_Add_Submit.Size = new System.Drawing.Size(181, 54);
-            this.btn_Add_Submit.TabIndex = 20;
-            this.btn_Add_Submit.Text = "Submit";
-            this.btn_Add_Submit.UseVisualStyleBackColor = false;
+            this.btn_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_Save.Font = new System.Drawing.Font("Rockwell", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.ForeColor = System.Drawing.Color.Red;
+            this.btn_Save.Location = new System.Drawing.Point(567, 486);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(181, 54);
+            this.btn_Save.TabIndex = 5;
+            this.btn_Save.Text = "Save";
+            this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // lbl_Add_Password
             // 
@@ -239,7 +226,7 @@
             this.tp_Update_User.Controls.Add(this.lbl_Update_Confirm_Password);
             this.tp_Update_User.Controls.Add(this.tb_Update_New_Password);
             this.tp_Update_User.Controls.Add(this.cb_Update_User_Role);
-            this.tp_Update_User.Controls.Add(this.btn_Update_Submit);
+            this.tp_Update_User.Controls.Add(this.btn_Update);
             this.tp_Update_User.Controls.Add(this.lbl_Update_New_Password);
             this.tp_Update_User.Controls.Add(this.lbl_Update_Username);
             this.tp_Update_User.Controls.Add(this.lbl_Update_User_Role);
@@ -268,15 +255,10 @@
             // 
             this.cb_Update_Username.Font = new System.Drawing.Font("Rockwell", 14F);
             this.cb_Update_Username.FormattingEnabled = true;
-            this.cb_Update_Username.Items.AddRange(new object[] {
-            "Admin",
-            "Manager",
-            "Cashier",
-            "Staff"});
             this.cb_Update_Username.Location = new System.Drawing.Point(729, 227);
             this.cb_Update_Username.Name = "cb_Update_Username";
             this.cb_Update_Username.Size = new System.Drawing.Size(393, 39);
-            this.cb_Update_Username.TabIndex = 36;
+            this.cb_Update_Username.TabIndex = 7;
             // 
             // tb_Update_Confirm_Password
             // 
@@ -285,8 +267,9 @@
             this.tb_Update_Confirm_Password.MaxLength = 10;
             this.tb_Update_Confirm_Password.Multiline = true;
             this.tb_Update_Confirm_Password.Name = "tb_Update_Confirm_Password";
+            this.tb_Update_Confirm_Password.PasswordChar = '#';
             this.tb_Update_Confirm_Password.Size = new System.Drawing.Size(393, 49);
-            this.tb_Update_Confirm_Password.TabIndex = 35;
+            this.tb_Update_Confirm_Password.TabIndex = 9;
             // 
             // lbl_Update_Confirm_Password
             // 
@@ -307,8 +290,9 @@
             this.tb_Update_New_Password.MaxLength = 10;
             this.tb_Update_New_Password.Multiline = true;
             this.tb_Update_New_Password.Name = "tb_Update_New_Password";
+            this.tb_Update_New_Password.PasswordChar = '#';
             this.tb_Update_New_Password.Size = new System.Drawing.Size(393, 49);
-            this.tb_Update_New_Password.TabIndex = 33;
+            this.tb_Update_New_Password.TabIndex = 8;
             // 
             // cb_Update_User_Role
             // 
@@ -322,19 +306,21 @@
             this.cb_Update_User_Role.Location = new System.Drawing.Point(729, 140);
             this.cb_Update_User_Role.Name = "cb_Update_User_Role";
             this.cb_Update_User_Role.Size = new System.Drawing.Size(393, 39);
-            this.cb_Update_User_Role.TabIndex = 32;
+            this.cb_Update_User_Role.TabIndex = 6;
+            this.cb_Update_User_Role.SelectedIndexChanged += new System.EventHandler(this.cb_Update_User_Role_SelectedIndexChanged);
             // 
-            // btn_Update_Submit
+            // btn_Update
             // 
-            this.btn_Update_Submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn_Update_Submit.Font = new System.Drawing.Font("Rockwell", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Update_Submit.ForeColor = System.Drawing.Color.Red;
-            this.btn_Update_Submit.Location = new System.Drawing.Point(540, 485);
-            this.btn_Update_Submit.Name = "btn_Update_Submit";
-            this.btn_Update_Submit.Size = new System.Drawing.Size(181, 54);
-            this.btn_Update_Submit.TabIndex = 31;
-            this.btn_Update_Submit.Text = "Submit";
-            this.btn_Update_Submit.UseVisualStyleBackColor = false;
+            this.btn_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_Update.Font = new System.Drawing.Font("Rockwell", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Update.ForeColor = System.Drawing.Color.Red;
+            this.btn_Update.Location = new System.Drawing.Point(540, 485);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(181, 54);
+            this.btn_Update.TabIndex = 10;
+            this.btn_Update.Text = "Update";
+            this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // lbl_Update_New_Password
             // 
@@ -378,7 +364,7 @@
             this.tp_Delete_User.Controls.Add(this.cb_Delete_Username);
             this.tp_Delete_User.Controls.Add(this.tb_Delete_Admin_Password);
             this.tp_Delete_User.Controls.Add(this.cb_Delete_User_Role);
-            this.tp_Delete_User.Controls.Add(this.btn_Delete_User);
+            this.tp_Delete_User.Controls.Add(this.btn_Delete);
             this.tp_Delete_User.Controls.Add(this.lbl_Delete_Admin_Password);
             this.tp_Delete_User.Controls.Add(this.lbl_Delete_Username);
             this.tp_Delete_User.Controls.Add(this.lbl_Delete_User_Role);
@@ -406,15 +392,10 @@
             // 
             this.cb_Delete_Username.Font = new System.Drawing.Font("Rockwell", 14F);
             this.cb_Delete_Username.FormattingEnabled = true;
-            this.cb_Delete_Username.Items.AddRange(new object[] {
-            "Admin",
-            "Manager",
-            "Cashier",
-            "Staff"});
             this.cb_Delete_Username.Location = new System.Drawing.Point(729, 227);
             this.cb_Delete_Username.Name = "cb_Delete_Username";
             this.cb_Delete_Username.Size = new System.Drawing.Size(393, 39);
-            this.cb_Delete_Username.TabIndex = 46;
+            this.cb_Delete_Username.TabIndex = 12;
             // 
             // tb_Delete_Admin_Password
             // 
@@ -423,34 +404,36 @@
             this.tb_Delete_Admin_Password.MaxLength = 10;
             this.tb_Delete_Admin_Password.Multiline = true;
             this.tb_Delete_Admin_Password.Name = "tb_Delete_Admin_Password";
+            this.tb_Delete_Admin_Password.PasswordChar = '#';
             this.tb_Delete_Admin_Password.Size = new System.Drawing.Size(393, 49);
-            this.tb_Delete_Admin_Password.TabIndex = 43;
+            this.tb_Delete_Admin_Password.TabIndex = 13;
             // 
             // cb_Delete_User_Role
             // 
             this.cb_Delete_User_Role.Font = new System.Drawing.Font("Rockwell", 14F);
             this.cb_Delete_User_Role.FormattingEnabled = true;
             this.cb_Delete_User_Role.Items.AddRange(new object[] {
-            "Admin",
             "Manager",
             "Cashier",
             "Staff"});
             this.cb_Delete_User_Role.Location = new System.Drawing.Point(729, 140);
             this.cb_Delete_User_Role.Name = "cb_Delete_User_Role";
             this.cb_Delete_User_Role.Size = new System.Drawing.Size(393, 39);
-            this.cb_Delete_User_Role.TabIndex = 42;
+            this.cb_Delete_User_Role.TabIndex = 11;
+            this.cb_Delete_User_Role.SelectedIndexChanged += new System.EventHandler(this.cb_Delete_User_Role_SelectedIndexChanged);
             // 
-            // btn_Delete_User
+            // btn_Delete
             // 
-            this.btn_Delete_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btn_Delete_User.Font = new System.Drawing.Font("Rockwell", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Delete_User.ForeColor = System.Drawing.Color.Red;
-            this.btn_Delete_User.Location = new System.Drawing.Point(528, 434);
-            this.btn_Delete_User.Name = "btn_Delete_User";
-            this.btn_Delete_User.Size = new System.Drawing.Size(181, 54);
-            this.btn_Delete_User.TabIndex = 41;
-            this.btn_Delete_User.Text = "Submit";
-            this.btn_Delete_User.UseVisualStyleBackColor = false;
+            this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_Delete.Font = new System.Drawing.Font("Rockwell", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Delete.ForeColor = System.Drawing.Color.Red;
+            this.btn_Delete.Location = new System.Drawing.Point(528, 434);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(181, 54);
+            this.btn_Delete.TabIndex = 14;
+            this.btn_Delete.Text = "Delete";
+            this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // lbl_Delete_Admin_Password
             // 
@@ -488,7 +471,17 @@
             this.lbl_Delete_User_Role.TabIndex = 38;
             this.lbl_Delete_User_Role.Text = "User Role";
             // 
-            // frm_Add_New_User
+            // tb_Add_Username
+            // 
+            this.tb_Add_Username.Font = new System.Drawing.Font("Rockwell", 12F);
+            this.tb_Add_Username.Location = new System.Drawing.Point(756, 225);
+            this.tb_Add_Username.MaxLength = 10;
+            this.tb_Add_Username.Multiline = true;
+            this.tb_Add_Username.Name = "tb_Add_Username";
+            this.tb_Add_Username.Size = new System.Drawing.Size(393, 49);
+            this.tb_Add_Username.TabIndex = 2;
+            // 
+            // frm_User_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -496,8 +489,9 @@
             this.ControlBox = false;
             this.Controls.Add(this.tc_User_Management);
             this.Controls.Add(this.lbl_User_Management);
-            this.Name = "frm_Add_New_User";
+            this.Name = "frm_User_Management";
             this.Text = "Add New User";
+            this.Load += new System.EventHandler(this.frm_User_Management_Load);
             this.tc_User_Management.ResumeLayout(false);
             this.tp_Add_New_User.ResumeLayout(false);
             this.tp_Add_New_User.PerformLayout();
@@ -517,12 +511,11 @@
         private System.Windows.Forms.TabPage tp_Add_New_User;
         private System.Windows.Forms.TabPage tp_Update_User;
         private System.Windows.Forms.TabPage tp_Delete_User;
-        private System.Windows.Forms.ComboBox cb_Add_Username;
         private System.Windows.Forms.TextBox tb_Add_Confirm_Password;
         private System.Windows.Forms.Label lbl_Add_Confirm_Password;
         private System.Windows.Forms.TextBox tb_Add_Password;
         private System.Windows.Forms.ComboBox cb_Add_User_Role;
-        private System.Windows.Forms.Button btn_Add_Submit;
+        private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Label lbl_Add_Password;
         private System.Windows.Forms.Label lbl_Add_Username;
         private System.Windows.Forms.Label lbl_Add_User_Role;
@@ -533,7 +526,7 @@
         private System.Windows.Forms.Label lbl_Update_Confirm_Password;
         private System.Windows.Forms.TextBox tb_Update_New_Password;
         private System.Windows.Forms.ComboBox cb_Update_User_Role;
-        private System.Windows.Forms.Button btn_Update_Submit;
+        private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.Label lbl_Update_New_Password;
         private System.Windows.Forms.Label lbl_Update_Username;
         private System.Windows.Forms.Label lbl_Update_User_Role;
@@ -541,9 +534,10 @@
         private System.Windows.Forms.ComboBox cb_Delete_Username;
         private System.Windows.Forms.TextBox tb_Delete_Admin_Password;
         private System.Windows.Forms.ComboBox cb_Delete_User_Role;
-        private System.Windows.Forms.Button btn_Delete_User;
+        private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Label lbl_Delete_Admin_Password;
         private System.Windows.Forms.Label lbl_Delete_Username;
         private System.Windows.Forms.Label lbl_Delete_User_Role;
+        private System.Windows.Forms.TextBox tb_Add_Username;
     }
 }

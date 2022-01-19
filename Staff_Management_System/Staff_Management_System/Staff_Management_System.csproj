@@ -63,11 +63,11 @@
     <Compile Include="frm_Add_Department.Designer.cs">
       <DependentUpon>frm_Add_Department.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Add_New_User.cs">
+    <Compile Include="frm_User_Management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Add_New_User.Designer.cs">
-      <DependentUpon>frm_Add_New_User.cs</DependentUpon>
+    <Compile Include="frm_User_Management.Designer.cs">
+      <DependentUpon>frm_User_Management.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Login.cs">
       <SubType>Form</SubType>
@@ -108,8 +108,8 @@
     <EmbeddedResource Include="frm_Add_Department.resx">
       <DependentUpon>frm_Add_Department.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Add_New_User.resx">
-      <DependentUpon>frm_Add_New_User.cs</DependentUpon>
+    <EmbeddedResource Include="frm_User_Management.resx">
+      <DependentUpon>frm_User_Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
