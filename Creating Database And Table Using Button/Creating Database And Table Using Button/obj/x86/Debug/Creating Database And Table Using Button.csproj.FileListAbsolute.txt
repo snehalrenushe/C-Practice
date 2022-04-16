@@ -1,0 +1,7 @@
+C:\C#\Creating Database And Table Using Button\Creating Database And Table Using Button\obj\x86\Debug\Creating_Database_And_Table_Using_Button.Create_Database_And_Table.resources
+C:\C#\Creating Database And Table Using Button\Creating Database And Table Using Button\obj\x86\Debug\Creating_Database_And_Table_Using_Button.Properties.Resources.resources
+C:\C#\Creating Database And Table Using Button\Creating Database And Table Using Button\obj\x86\Debug\Creating Database And Table Using Button.csproj.GenerateResource.Cache
+C:\C#\Creating Database And Table Using Button\Creating Database And Table Using Button\bin\Debug\Creating Database And Table Using Button.exe
+C:\C#\Creating Database And Table Using Button\Creating Database And Table Using Button\bin\Debug\Creating Database And Table Using Button.pdb
+C:\C#\Creating Database And Table Using Button\Creating Database And Table Using Button\obj\x86\Debug\Creating Database And Table Using Button.exe
+C:\C#\Creating Database And Table Using Button\Creating Database And Table Using Button\obj\x86\Debug\Creating Database And Table Using Button.pdb
