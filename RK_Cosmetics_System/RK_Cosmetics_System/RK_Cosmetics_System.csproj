@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm.Designer.cs">
+      <DependentUpon>frm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +62,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm.resx">
+      <DependentUpon>frm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDI.resx">
       <DependentUpon>MDI.cs</DependentUpon>
     </EmbeddedResource>

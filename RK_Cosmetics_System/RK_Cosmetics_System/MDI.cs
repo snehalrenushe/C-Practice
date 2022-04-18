@@ -29,18 +29,6 @@ namespace RK_Cosmetics_System
 
             btn_Customer.BackColor = Color.FromArgb(43, 41, 41);
             btn_Customer.ForeColor = Color.FromArgb(255, 0, 111);
-
-            btn_Employee.BackColor = Color.FromArgb(43, 41, 41);
-            btn_Employee.ForeColor = Color.FromArgb(255, 0, 111);
-
-            btn_Distributor.BackColor = Color.FromArgb(43, 41, 41);
-            btn_Distributor.ForeColor = Color.FromArgb(255, 0, 111);
-
-            btn_Brand.BackColor = Color.FromArgb(43, 41, 41);
-            btn_Brand.ForeColor = Color.FromArgb(255, 0, 111);
-
-            btn_Product.BackColor = Color.FromArgb(43, 41, 41);
-            btn_Product.ForeColor = Color.FromArgb(255, 0, 111);
         }
 
         private int imageNumber = 1;
@@ -75,48 +63,19 @@ namespace RK_Cosmetics_System
         {
             btn_Add_New_Customer.BackColor = Color.FromArgb(112, 12, 55);
 
-            btn_View_Customer_List.BackColor = Color.FromArgb(112, 12, 55);
+            //btn_View_Customer_List.BackColor = Color.FromArgb(112, 12, 55);
         }
 
-        private void pnl_Employee_Submenu_Paint(object sender, PaintEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            panel3.Visible = true;
         }
 
-        private void btn_Employee_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            btn_Add_New_Employee.BackColor = Color.FromArgb(112, 12, 55);
+            frm f = new frm();
 
-            btn_Update_Employee_Details.BackColor = Color.FromArgb(112, 12, 55);
-
-            btn_View_Employee_List.BackColor = Color.FromArgb(112, 12, 55);
-        }
-
-        private void btn_Distributor_Click(object sender, EventArgs e)
-        {
-            btn_Add_New_Distributor.BackColor = Color.FromArgb(112, 12, 55);
-
-            btn_Update_Distributor_Details.BackColor = Color.FromArgb(112, 12, 55);
-
-            btn_View_Distributor_List.BackColor = Color.FromArgb(112, 12, 55);
-        }
-
-        private void btn_Brand_Click(object sender, EventArgs e)
-        {
-            btn_Add_New_Brand.BackColor = Color.FromArgb(112, 12, 55);
-
-            btn_Update_Brand_Details.BackColor = Color.FromArgb(112, 12, 55);
-
-            btn_View_Brand_List.BackColor = Color.FromArgb(112, 12, 55);
-        }
-
-        private void btn_Product_Click(object sender, EventArgs e)
-        {
-            btn_Add_New_Product.BackColor = Color.FromArgb(112, 12, 55);
-
-            btn_Update_Product_Details.BackColor = Color.FromArgb(112, 12, 55);
-
-            btn_View_Product_List.BackColor = Color.FromArgb(112, 12, 55);
+            f.Show();
         }
 
     }
