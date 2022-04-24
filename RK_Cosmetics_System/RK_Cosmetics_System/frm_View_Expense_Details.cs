@@ -19,6 +19,16 @@ namespace RK_Cosmetics_System
         private void frm_View_Expense_Details_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(26, 26, 26);
+
+            lbl_View_Expense_List.ForeColor = Color.FromArgb(255, 0, 111);
+
+            pnl_View_Expense_Back.BackColor = Color.FromArgb(42, 42, 54);
+
+            btn_Search.BackColor = Color.FromArgb(255, 0, 111);
+
+            btn_Refresh.BackColor = Color.FromArgb(255, 0, 111);
+
+            dgv_Expense_List.BackgroundColor = Color.FromArgb(82, 82, 92);
         }
     }
 }

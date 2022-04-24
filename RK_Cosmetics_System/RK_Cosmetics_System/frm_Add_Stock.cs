@@ -20,14 +20,9 @@ namespace RK_Cosmetics_System
         {
             this.BackColor = Color.FromArgb(26, 26, 26);
 
-            this.BackColor = Color.FromArgb(26, 26, 26);
-
             lbl_Add_Stock.ForeColor = Color.FromArgb(255, 0, 111);
 
             pnl_Stock_Back.BackColor = Color.FromArgb(42, 42, 54);
-
-            btn_Save.BackColor = Color.FromArgb(255, 0, 111);
-            btn_Refresh.BackColor = Color.FromArgb(255, 0, 111);
 
             cb_Brand_Name.BackColor = Color.FromArgb(33, 33, 55);
             cb_Product_Name.BackColor = Color.FromArgb(33, 33, 55);
